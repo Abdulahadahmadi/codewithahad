@@ -25,13 +25,13 @@ function index() {
   }
 
   const navigation = [
-    { name: "projects", href: "/pathway", current: false },
-    { name: "blog", href: "/courses", current: false },
-    { name: "Contact me", href: "/blog", current: false },
+    { name: "projects", href: "/projects", current: false },
+    { name: "blog", href: "/blog", current: false },
+    { name: "Contact me", href: "/contact", current: false },
   ]
   return (
     <>
-      <nav className="relative flex flex-wrap w-full items-center justify-between px-2 py-6  bg-transparent shadow-xl">
+      <nav className="relative flex flex-wrap w-full items-center justify-between px-2 py-6  bg-transparent border">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
@@ -82,20 +82,21 @@ function index() {
             }
             id="navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="mt-3">
-                <label for="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
+            <ul className="flex flex-col lg:flex-row list-none lg:m-auto ">
+              {/* <li className="mt-3">
+                <label htmlFor="Toggle" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
                   <span className="relative">
-                    <input onClick={handleDarkMode} id="Toggle1" type="checkbox" className="hidden peer" />
+                    <input onClick={handleDarkMode} id="Toggle" type="checkbox" className="hidden peer" />
                     <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
                     <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
                   </span>
                   </label>
-              </li>
+              </li> */}
               <li className="hover:underline">
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg leading-snug text-gray-800 hover:opacity-75 dark:text-gray-500"
-                  href="/section"
+                  href="/projects"
+                  passHref
                 >
                   <span className="ml-2">{navigation[0].name}</span>
                 </Link>
@@ -103,7 +104,8 @@ function index() {
               <li className="hover:underline">
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg leading-snug text-gray-200 hover:opacity-75 dark:text-gray-500"
-                  href="courses"
+                  href="blog"
+                  passHref
                 >
                   <span className="ml-2">{navigation[1].name}</span>
                 </Link>
@@ -111,24 +113,28 @@ function index() {
               <li className="hover:underline">
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:opacity-75 dark:text-gray-500"
-                  href="/blog"
+                  href="/contact"
+                  passHref
                 >
                   <span className="ml-2">{navigation[2].name}</span>
                 </Link>
               </li>
-              <li className="hover:underline">
+             
+            </ul>
+            <button className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-black hover:text-white'>
+              Hire me!
+            </button>
+            <div className="hover:underline">
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:opacity-75 dark:text-gray-400"
                   href="https://github.com/abdulahadahmadi"
                   target="_blank"
+                  passHref
                 >
                   <Image className="" src={github} alt="github logo" width={36} height={36} />
                 </Link>
-              </li>
-            </ul>
-            <button className='text-lg text-black bg-gray-500'>
-              Hire me!
-            </button>
+            </div>
+
           </div>
         </div>
       </nav>
