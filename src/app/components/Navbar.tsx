@@ -121,8 +121,8 @@ function index() {
               </li>
              
             </ul>
-            <button className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-black hover:text-white'>
-              Hire me!
+            <button className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-cyan-500 hover:text-white'>
+              Hire Me!
             </button>
             <div className="hover:underline">
                 <Link
