@@ -4,10 +4,12 @@ import Card from './Card'
 const Service = () => {
   return (
     <div>
-      <div className='text-center leading-10'>
-        <span className='text-cyan-500 text-center text-5xl font-bold'>Service</span>
+      <div className='text-center leading-10 my-10 lg:my-40'>
+        <span className='text-cyan-500 text-center text-2xl md:text-5xl font-bold'>Service</span>
         <h1 className='text-2xl md:text-3xl font-bold'>Expertise Service! Let's check it out</h1>
-        <p className='text-gray-800 mx-auto md:mx-16 lg:mx-80'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br /> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p className='text-gray-800 mx-auto md:mx-16 lg:mx-80'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+         Lorem Ipsum has been the industry <br /> standard dummy text ever since the 1500s, when an unknown printer took a galley of
+         type and scrambled it to make a type specimen book.</p>
         <div className='grid grid-cols-3 mx-auto'>
       </div>
       <div className='grid md:grid-cols-2 lg:grid-cols-3 md:gap-5'>
