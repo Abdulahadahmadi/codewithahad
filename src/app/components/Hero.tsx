@@ -2,14 +2,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
 import profile from '../../../public/profile.png'
+import image from '../../../public/intro0.png'
 import { BsLinkedin, BsWhatsapp, BsInstagram, BsCodeSquare } from 'react-icons/bs'
 
 const Hero = () => {
   return (
     <div className='flex flex-col-reverse md:flex-row justify-center items-center mt-10 lg:mt-40 w-full'>
       <section className='lg:mr-60'>
-        <h1 className='text-2xl md:text-3xl lg:text-6xl mx-5 md:mx-0  '>HEY! <strong>I'm Ahad,</strong> A <br /><strong>Software Developer <br /></strong>Based in <strong>Cyprus</strong></h1>
-        <p className='text-gray-400 mx-4'>Curious about learning new technologies,<br /> with experience of more than 2 years in this field.</p>
+        {/* <h1 className='text-2xl md:text-3xl lg:text-6xl mx-5 md:mx-0  '>HEY! <strong>I'm Ahad,</strong> A <br /><strong>Software Developer <br /></strong>Based in <strong>Cyprus</strong></h1>
+        <p className='text-gray-400 mx-4'>Curious about learning new technologies,<br /> with experience of more than 2 years in this field.</p> */}
+          <Image className=' object-center w-full md:w-2/3  object-cover rounded-xl' src={image} alt='Intro Image' />
         <div className='flex flex-row items-center justify-center lg:justify-start'>
           <Link className='text-black bg-gray-300 px-6 md:px-10 py-2 md:py-3 hover:bg-cyan-500 hover:text-white rounded-full' href='/contact' passHref>Contact Me</Link>
           <div className='flex m-4 justify-center items-center'>
