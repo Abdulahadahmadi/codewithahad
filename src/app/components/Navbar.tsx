@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import github from '../../../public/github.png'
+import { BsYoutube } from 'react-icons/bs'
 
 function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -31,7 +32,7 @@ function index() {
   ]
   return (
     <>
-      <nav className="relative flex flex-wrap w-full items-center justify-between px-2 py-6  bg-transparent border">
+      <nav className="relative flex flex-wrap w-full items-center justify-between px-2 py-6  bg-transparent border ">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
@@ -133,6 +134,9 @@ function index() {
                 >
                   <Image className="" src={github} alt="github logo" width={36} height={36} />
                 </Link>
+                  <Link className='w-12 h-12 py-4 pl-4 ml-2 text-red-600 cursor-pointer' href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/' target='_blank' passHref>
+                    <BsYoutube />
+                  </Link>
             </div>
 
           </div>
