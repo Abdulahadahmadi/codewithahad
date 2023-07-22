@@ -125,7 +125,7 @@ function index() {
             <button className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-cyan-500 hover:text-white'>
               Hire Me!
             </button>
-            <div className="hover:underline">
+            <div className="flex flex-col md:flex-row">
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:opacity-75 dark:text-gray-400"
                   href="https://github.com/abdulahadahmadi"
@@ -134,9 +134,13 @@ function index() {
                 >
                   <Image className="" src={github} alt="github logo" width={36} height={36} />
                 </Link>
-                  <Link className='w-12 h-12 py-4 pl-4 ml-2 text-red-600 cursor-pointer' href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/' target='_blank' passHref>
-                    <BsYoutube />
-                  </Link>
+                <Link
+                  className='w-12 h-12 py-4 ml-2 text-red-600 cursor-pointer grayscale hover:grayscale-0' 
+                  href='https://www.youtube.com/channel/UC5BLFjPW4MO9p5-G6oat3IA'
+                  target='_blank' 
+                  passHref>
+                  <BsYoutube />
+                </Link>
             </div>
 
           </div>
