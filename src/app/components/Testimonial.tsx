@@ -52,13 +52,13 @@ const Testimonial = () => {
             a lot not only with my projects but about the sources and paths to
             take to improve my programming skills, I hardly recommend him.
           </p>
-          <div className="flex flex-row justify-between ">
+          <div className="flex flex-row justify-around mt-2">
             <Image
               src="https://media.licdn.com/dms/image/C5603AQFOa7qV9dMmsg/profile-displayphoto-shrink_200_200/0/1652988970949?e=1695859200&v=beta&t=yPhoVfWZNME_opJtedZy8jOPP4uaOsYxpjjyU3HQq0I"
               alt="profile"
               width={50}
-              height={50}
-              className="object-cover object-center rounded-full"
+              height={30}
+              className="object-cover object-center rounded-full mr-6"
             />
             <div className="flex flex-col">
               <span className="text-lg font-bold">Khudadad Khawari</span>
@@ -69,27 +69,6 @@ const Testimonial = () => {
           </div>
         </section>
 
-        {/* <section className="w-64 h-64 md:w-96 md:h-80 bg-white m-10 rounded-xl shadow-xl  p-8 hover:bg-cyan-500 hover:decoration-gray-100 hover:cursor-pointer rotate-12 animate-pulse">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing . Beatae optio
-            autem veritatis molestias consectetur porro nemo atque laborum est
-            cumque deserunt, voluptatem animi dolores! Laboriosam id deleniti
-            dolorem omnis soluta!
-          </p>
-          <div className="flex flex-row justify-between ">
-            <Image
-              src="/profile.png"
-              alt="profile"
-              width={50}
-              height={50}
-              className="object-cover object-center rounded-full"
-            />
-            <div className="flex flex-col">
-              <span className="text-lg font-bold">Ali</span>
-              <span className="text-gray-600">CEO</span>
-            </div>
-          </div>
-        </section> */}
       </div>
     </div>
   );
