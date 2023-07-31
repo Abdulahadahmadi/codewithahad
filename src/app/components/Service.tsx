@@ -6,7 +6,7 @@ import {  BsCodeSlash } from 'react-icons/bs'
 
 const Service = () => {
   return (
-    <div>
+    <div className='mx-auto'>
       <div className='text-center my-10 '>
         <span className='text-cyan-500 text-center text-2xl md:text-5xl font-bold'>Service</span>
         <h1 className='text-2xl md:text-3xl font-bold mx-5'>Expertise Service! Let's check it out</h1>
