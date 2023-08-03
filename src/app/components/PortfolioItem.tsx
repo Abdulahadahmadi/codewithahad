@@ -31,7 +31,7 @@ const PortfolioItem = ({ project }) => {
             <div
               className="bg-white p-4 rounded-md"
               style={{
-                width: '90%', // Set the width of the dialog to 90% of the screen
+                width: '100%', // Set the width of the dialog to 90% of the screen
                 position: 'absolute',
                 top: dialogPosition.y,
                 left: dialogPosition.x,
