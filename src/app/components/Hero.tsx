@@ -11,7 +11,7 @@ const Hero = () => {
       <section className='lg:mr-28'>
           <Image className=' object-center w-full md:w-2/3  object-cover rounded-xl' src={image} alt='Intro Image' />
         <div className='flex flex-row items-center justify-center lg:justify-start'>
-          <Link className='text-black bg-gray-300 text-xs md:text-base px-4 md:px-10 py-1 md:py-3 hover:bg-cyan-500 hover:text-white rounded-full' href='/contact' passHref>Contact Me</Link>
+          <Link className='text-black bg-gray-300 text-xs md:text-base px-4 md:px-10 py-2 md:py-3 hover:bg-cyan-500 hover:text-white rounded-full' href='/contact' passHref>Contact Me</Link>
           <div className='flex m-4 justify-center items-center'>
             <Link className='w-12 h-12 ring-1 rounded-full py-4 pl-4 ml-2 hover:bg-cyan-500 hover:text-white' href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/' target='_blank' passHref>
               <BsLinkedin />
