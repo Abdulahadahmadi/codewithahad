@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import profile from '../../../public/profile.png'
+import profile from '../../../public/avatar.png'
 import mern from '../../../public/mern.png';
 import mevn from '../../../public/mevn.png';
 import cv from '../../../public/cv.pdf'
@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div className='flex flex-col md:flex-row justify-center md:justify-around items-center bg-gradient-to-r from-violet-500 to-fuchsia-500 w-full p-10 '>
       <section>
-        <Image src={profile} alt='about' width={350} height={400} className='object-cover object-center grayscale hover:grayscale-0 cursor-pointer' />
+        <Image src={profile} alt='about' width={550} height={400} className='object-cover object-center grayscale hover:grayscale-0 cursor-pointer' />
       </section>
 
       <section className=''>
