@@ -1,32 +1,62 @@
 import React from 'react'
 import Link from 'next/link'
+import { BsLinkedin, BsWhatsapp, BsInstagram, BsCodeSquare } from 'react-icons/bs';
 
 const Footer = () => {
   return (
-    <div className='bg-gray-200 w-full p-10 md:pt-28 md:px-28'>
-     <div className='flex flex-col md:flex-row justify-between'>
-        <div className='mb-16'>
-            <span className='text-cyan-500 uppercase mb-5'>Subscribe</span>
-            <p className='text-2xl md:text-3xl lg:text-5xl font-bold'>Get Notified of New Projects</p>
-            <span className='mt-16'>Code With Ahad</span>
-        </div>
-          
-          <div>
-            <p className='text-sm md:text-base'>Want to be the first to know about all the latest news and new blog posts? Subscribe to my newsletter and stay up-to-date.</p>
-            <form className='flex flex-row mt-4'>
-              <input type="text" placeholder='Your Email' className='px-2 py-1 md:px-8 md:py-4 rounded-l-md bg-white md:w-96' />
-              <button className='px-2 py-1 md:px-4 md:py-2 text-sm md:text-base ring-1 text-black hover:text-white hover:bg-cyan-500 rounded-r-md'>Subscribe</button>
-            </form>
-            <ul className='flex flex-row text-gray-600 gap-6 mt-4 md:mt-16 text-sm md:text-base'>
-              <li className='hover:underline hover:cursor-pointer'><Link href='/projects'>Projects</Link></li>
-              <li className='hover:underline hover:cursor-pointer'><Link href='/blog'>Blog</Link></li>
-              <li className='hover:underline hover:cursor-pointer'><Link href='/contact'>Contact</Link></li>
-            </ul>
+    // <div className='bg-gray-200 w-full p-10 md:pt-28 md:px-28'>
+      <footer className="py-6">
+        <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
+          <div className="grid grid-cols-12">
+            <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
+              <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 md:justify-start">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-900">
+                    <path d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z"></path>
+                  </svg>
+                </div>
+                <span className="self-center text-2xl font-semibold">Brand name</span>
+              </a>
+            </div>
+            <div className="col-span-6 text-center md:text-left md:col-span-3">
+              <p className="pb-1 text-lg font-medium">Category</p>
+              <ul>
+                <li>
+                  <Link href='/projects'>Projects</Link>
+                </li>
+                <li>
+                <Link href='/blog'>Blog</Link>
+                </li>
+                <li>
+                <Link href='/contact'>Contact</Link>
+                </li>
+              </ul>
+            </div>
           </div>
-     </div>
-      <p className='w-full bg-gray-400 h-1 rounded-xl border border-b-gray-100 my-5'></p>
-      <span className='flex justify-center items-center text-gray-500 text-xs md:text-md'>&copy; Copyright {new Date().getFullYear()} | All rights reserved by Code With Ahad</span>
-    </div>
+          <div className="grid justify-center pt-6 lg:justify-between">
+            <div className="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
+              <span>©{new Date().getFullYear()} All rights reserved by Code With Ahad</span>
+            </div>
+            <div className="flex flex-col-reverse md:flex-row justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
+              <div className='flex justify-center items-center'>
+                <a className='font-bold' href='codewithahad01@gmail.com'>codewithahad01@gmail.com</a>
+              </div>
+              <div className='flex flex-row gap-2 md:gap-4 justify-center items-center'>
+                <a rel="noopener noreferrer" href="#" title="Email" className="flex items-center justify-center w-10 h-10 rounded-full ring-1 hover:bg-cyan-500 dark:text-gray-900">
+                  <BsLinkedin />
+                </a>
+                <a rel="noopener noreferrer" href="#" title="Twitter" className="flex items-center justify-center w-10 h-10 rounded-full ring-1 hover:bg-cyan-500 dark:text-gray-900">
+                  <BsWhatsapp />
+                </a>
+                <a rel="noopener noreferrer" href="#" title="GitHub" className="flex items-center justify-center w-10 h-10 rounded-full ring-1 hover:bg-cyan-500 dark:text-gray-900">
+                  <BsInstagram />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    // </div>
   )
 } 
 
