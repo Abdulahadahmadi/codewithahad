@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import github from '../../../public/github.png'
+import Logo from '../../../public/logo_transparent.png'
 import { BsYoutube } from 'react-icons/bs'
 
 function index() {
@@ -32,15 +33,25 @@ function index() {
   ]
   return (
     <>
-      <nav className="relative flex flex-wrap w-full items-center justify-between px-2 py-6  bg-transparent border ">
+      <nav className="relative flex flex-wrap w-full items-center justify-between px-2   bg-transparent border ">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
-              className=" text-xl md:text-3xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap text-gray-700 dark:text-gray-400"
+              className="inline-block ml-6"
               href="/"
+              passHref
             >
-              Code With Ahad
+              <Image className="object-contain  w-20 aspect[3/2] " src={Logo} alt="logo image" />
             </Link>
+            {/* <li className="mt-3">
+                <label htmlFor="Toggle" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
+                  <span className="relative">
+                    <input onClick={handleDarkMode} id="Toggle" type="checkbox" className="hidden peer" />
+                    <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
+                    <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
+                  </span>
+                  </label>
+        sm  </li> */}
             <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border lg:hidden"
                   onClick={() => setNavbarOpen(!navbarOpen)}
@@ -84,18 +95,9 @@ function index() {
             id="navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:m-auto ">
-              {/* <li className="mt-3">
-                <label htmlFor="Toggle" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
-                  <span className="relative">
-                    <input onClick={handleDarkMode} id="Toggle" type="checkbox" className="hidden peer" />
-                    <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
-                    <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
-                  </span>
-                  </label>
-              </li> */}
               <li className="hover:underline">
                 <Link
-                  className="px-3 py-2 flex items-center text-xs md:text-lg leading-snug text-gray-800 hover:opacity-75 dark:text-gray-500"
+                  className="px-3 py-2 flex items-center text-sm md:text-md leading-snug text-gray-800 hover:opacity-75 dark:text-gray-500"
                   href="/projects"
                   passHref
                 >
@@ -104,7 +106,7 @@ function index() {
               </li>
               <li className="hover:underline">
                 <Link
-                  className="px-3 py-2 flex items-center text-xs md:text-lg leading-snug text-gray-200 hover:opacity-75 dark:text-gray-500"
+                  className="px-3 py-2 flex items-center text-sm md:text-md leading-snug text-gray-200 hover:opacity-75 dark:text-gray-500"
                   href="blog"
                   passHref
                 >
@@ -113,7 +115,7 @@ function index() {
               </li>
               <li className="hover:underline">
                 <Link
-                  className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:opacity-75 dark:text-gray-500"
+                  className="px-3 py-2 flex items-center text-sm md:text-md  leading-snug text-gray-800 hover:opacity-75 dark:text-gray-500"
                   href="/contact"
                   passHref
                 >
@@ -135,7 +137,7 @@ function index() {
                   <Image className="" src={github} alt="github logo" width={36} height={36} />
                 </Link>
                 <Link
-                  className='w-12 h-12 py-4 ml-2 text-red-600 cursor-pointer grayscale hover:grayscale-0' 
+                  className='w-16 h-12 py-4 ml-2 text-red-600 cursor-pointer grayscale hover:grayscale-0' 
                   href='https://www.youtube.com/channel/UC5BLFjPW4MO9p5-G6oat3IA'
                   target='_blank' 
                   passHref>
