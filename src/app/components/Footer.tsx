@@ -12,20 +12,20 @@ const Footer = () => {
           <div className="grid grid-cols-12">
             <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
               <a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 md:justify-start">
-                <div className="flex items-center justify-center w-20 h-20b">
+                <div className="flex items-center justify-center w-20 h-20">
                   <Image src={Logo} alt='logo' />
                 </div>
               </a>
             </div>
             <div className="flex justify-center items-center mx-auto">
               <ul className='flex flex-row gap-4 justify-center items-center  lg:ml-72'>
-                <li>
+                <li className='hover:underline'>
                   <Link href='/projects'>Projects</Link>
                 </li>
-                <li>
+                <li className='hover:underline'>
                 <Link href='/blog'>Blog</Link>
                 </li>
-                <li>
+                <li className='hover:underline'>
                 <Link href='/contact'>Contact</Link>
                 </li>
               </ul>
