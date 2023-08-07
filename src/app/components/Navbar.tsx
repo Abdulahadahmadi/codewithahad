@@ -6,6 +6,7 @@ import Image from "next/image";
 import github from '../../../public/github.png'
 import Logo from '../../../public/logo_transparent.png'
 import { BsYoutube } from 'react-icons/bs'
+import { AiFillGithub } from 'react-icons/ai'
 
 function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -129,15 +130,15 @@ function index() {
             </button>
             <div className="flex flex-col md:flex-row">
                 <Link
-                  className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:opacity-75 dark:text-gray-400"
+                  className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:grayscale dark:text-gray-400"
                   href="https://github.com/abdulahadahmadi"
                   target="_blank"
                   passHref
                 >
-                  <Image className="" src={github} alt="github logo" width={36} height={36} />
+                  <AiFillGithub className="text-gray-800" />
                 </Link>
                 <Link
-                  className='w-16 h-12 py-4 ml-2 text-red-600 cursor-pointer grayscale hover:grayscale-0' 
+                  className='w-16 h-12 py-4 ml-2 text-red-600 cursor-pointer hover:grayscale' 
                   href='https://www.youtube.com/channel/UC5BLFjPW4MO9p5-G6oat3IA'
                   target='_blank' 
                   passHref>
