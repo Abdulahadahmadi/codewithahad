@@ -1,6 +1,10 @@
 'use client'
 
 import React, { useState } from 'react';
+import doodle from '../../../public/doodle.svg'
+import Image from 'next/image';
+import { BiArrowBack } from 'react-icons/bi'
+import Link from 'next/link';
 
 interface FormData {
   name: string;
@@ -30,9 +34,21 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="grid max-w-screen-xl  gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 my-10">
+        <div className="flex flex-col justify-between items-center mt-56 md:mt-0">
+        <div className='flex flex-row-reverse justify-center items-center gap-2 ring-1 rounded-md px-3 py-1 hover:cursor-pointer hover:bg-cyan-500 hover:text-white'>
+            <Link href='/' passHref className='flex flex-row justify-center items-center gap-1 md:gap-3'>
+            <span>back to home</span>
+                <BiArrowBack />
+            </Link>
+        </div>
+            <div className="space-y-2">
+                <h2 className="text-4xl font-bold  lg:text-5xl">Let's talk!</h2>
+                <div className="dark:text-gray-400">Fill in the form to start a conversation.</div>
+            </div>
+            <Image width={450} src={doodle} alt="doodle image" className="p-6" />
+	    </div>
+      <form onSubmit={handleSubmit} className="space-y-4 md:mt-8">
         <div>
           <label htmlFor="name" className="block font-medium">
             Name
@@ -78,7 +94,7 @@ const ContactForm: React.FC = () => {
         <div>
           <button
             type="submit"
-            className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+            className="w-full ring-1 text-white py-2 px-4 rounded-lg bg-cyan-500 hover:bg-cyan-600"
           >
             Submit
           </button>
