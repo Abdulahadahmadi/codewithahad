@@ -7,13 +7,13 @@ const Portfolio = () => {
     {
       title: 'Project 1',
       description: 'This is the description for Project 1.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfrqh6s5bj9LqOjrGADEHgabFzaIZKskD1xg&usqp=CAU',
+      image: 'https://media.licdn.com/dms/image/C4D22AQFKiDlJUoUT2g/feedshare-shrink_800/0/1674668981057?e=1694649600&v=beta&t=shJFYPBeyyZAEOW_ufwnGx_F2ipIkZeEsBqfBXlprGM',
       link: 'https://jobs.af',
     },
     {
       title: 'Project 2',
       description: 'This is the description for Project 2.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3Q54FgNW2x2Rp9oY70DjRT6NDlCHomynOt2NyRvpow&s',
+      image: 'https://github.com/Abdulahadahmadi/admin-dashboard/raw/main/public/assets/screenshots/pic-1.png ',
       link: 'https://jobs.af',
     },
     {
@@ -22,7 +22,6 @@ const Portfolio = () => {
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3Q54FgNW2x2Rp9oY70DjRT6NDlCHomynOt2NyRvpow&s',
       link: 'https://jobs.af',
     },
-    
     // Add more projects here
   ];
 
