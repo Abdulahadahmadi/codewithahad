@@ -1,5 +1,7 @@
 import React from 'react'
 import PortfolioItem from '../components/PortfolioItem';
+import Link from 'next/link';
+import { BiArrowBack } from 'react-icons/bi';
 
 const page = () => {
 
@@ -7,13 +9,13 @@ const page = () => {
     {
       title: 'Project 1',
       description: 'This is the description for Project 1.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfrqh6s5bj9LqOjrGADEHgabFzaIZKskD1xg&usqp=CAU',
+      image: 'https://media.licdn.com/dms/image/C4D22AQFKiDlJUoUT2g/feedshare-shrink_800/0/1674668981057?e=1694649600&v=beta&t=shJFYPBeyyZAEOW_ufwnGx_F2ipIkZeEsBqfBXlprGM',
       link: 'https://jobs.af',
     },
     {
       title: 'Project 2',
       description: 'This is the description for Project 2.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3Q54FgNW2x2Rp9oY70DjRT6NDlCHomynOt2NyRvpow&s',
+      image: 'https://github.com/Abdulahadahmadi/admin-dashboard/raw/main/public/assets/screenshots/pic-1.png',
       link: 'https://jobs.af',
     },
     {
@@ -27,7 +29,13 @@ const page = () => {
   ];
 
   return (
-    <div className='w-full bg-gray-200 py-10'>
+    <div className='w-full bg-gray-200 py-6'>
+      <div className='flex flex-row-reverse justify-end items-end gap-2 ring-1 rounded-md px-2 py-1 w-36 md:w-40 hover:cursor-pointer hover:bg-cyan-500 hover:text-white'>
+          <Link href='/' passHref className='flex flex-row justify-center items-center gap-1 md:gap-3'>
+          <span>back to home</span>
+              <BiArrowBack />
+          </Link>
+      </div>
       <h1 className='text-xl md:text-2xl lg:text-4xl text-cyan-500 text-center'>Portfolio</h1>
       <p className='text-2xl md:text-4xl lg:text-6xl text-center font-bold my-8'>Digital Product Showcases</p>
       <section className='flex flex-row justify-center gap-2 md:gap-4'>
