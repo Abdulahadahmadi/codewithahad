@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import github from '../../../public/github.png'
-import Logo from '../../../public/logo_transparent.png'
+import github from '../../public/github.png'
+import Logo from '../../public/logo_transparent.png'
 import { BsYoutube } from 'react-icons/bs'
 import { AiFillGithub } from 'react-icons/ai'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image';
-import Logo from '../../../public/logo_transparent.png'
+import Logo from '../../public/logo_transparent.png'
 import { BsLinkedin, BsWhatsapp, BsInstagram } from 'react-icons/bs';
 
 const Footer = () => {

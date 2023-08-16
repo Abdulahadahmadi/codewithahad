@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import discuss from '../../../public/discuss.png'
+import discuss from '../../public/discuss.png'
 
 const Contact = () => {
   return (

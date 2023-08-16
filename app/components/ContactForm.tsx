@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import doodle from '../../../public/doodle.svg';
+import doodle from '../../public/doodle.svg';
 import Image from 'next/image';
 import { BiArrowBack } from 'react-icons/bi';
 import Link from 'next/link';

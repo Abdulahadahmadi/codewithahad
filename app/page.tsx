@@ -3,7 +3,7 @@ import Hero from './components/Hero'
 import Service from './components/Service'
 import About from './components/About'
 import Testimonial from './components/Testimonial'
-import Portfolio from './components/Portfilio'
+import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 

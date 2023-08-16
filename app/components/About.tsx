@@ -3,10 +3,9 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import profile from '../../../public/avatar.png'
-import mern from '../../../public/mern.png';
-import mevn from '../../../public/mevn.png';
-import cv from '../../../public/cv.pdf'
+import profile from '../../public/avatar.png'
+import mern from '../../public/mern.png';
+import mevn from '../../public/mevn.png';
 import { BsArrowRightCircle } from 'react-icons/bs'
 
 const About = () => {

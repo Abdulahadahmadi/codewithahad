@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
-import profile from '../../../public/profile.png'
-import image from '../../../public/intro0.png'
+import profile from '../../public/profile.png'
+import image from '../../public/intro0.png'
 import { BsLinkedin, BsWhatsapp, BsInstagram, BsCodeSquare } from 'react-icons/bs'
 
 const Hero = () => {
