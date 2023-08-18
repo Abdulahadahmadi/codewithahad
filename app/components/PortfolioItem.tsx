@@ -1,9 +1,12 @@
 'use client'
-
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-const PortfolioItem = ({ project }) => {
+interface Project {
+  image: string;
+}
+
+const PortfolioItem: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <div className="p-4">
       <div className="relative">

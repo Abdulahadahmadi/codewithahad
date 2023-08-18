@@ -11,22 +11,7 @@ import { AiFillGithub } from 'react-icons/ai'
 function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [navbarOpen, setNavbarOpen] = useState(false);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [darkMode, setDarkMode] = useState(false)
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useEffect(() => {
-    if(darkMode === 'dark') {
-      document.documentElement.classList.add('dark')
-    }else {
-      document.documentElement.classList.remove('dark')
-    }
-  }, [darkMode])
   
-  const handleDarkMode = () => {
-    setDarkMode(darkMode === "dark" ? "light" : "dark")
-  }
-
   const navigation = [
     { name: "projects", href: "/projects", current: false },
     { name: "blog", href: "/blog", current: false },
