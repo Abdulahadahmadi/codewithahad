@@ -11,7 +11,7 @@ import { AiFillGithub } from 'react-icons/ai'
 function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [navbarOpen, setNavbarOpen] = useState(false);
-  
+
   const navigation = [
     { name: "projects", href: "/projects", current: false },
     { name: "blog", href: "/blog", current: false },
