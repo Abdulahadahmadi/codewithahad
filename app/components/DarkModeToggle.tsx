@@ -32,12 +32,12 @@ const DarkModeToggle = () => {
     <div>
         <button
             onClick={toggleDarkMode}
-            className="p-2 mt-6 rounded-full bg-gray-300 dark:bg-gray-200"
+            className="p-2 rounded-full bg-gray-300 dark:bg-gray-200"
             >
             {isDarkMode ? (
-                <Image width={16} height={16} src={dayMode} alt='light mode' />
+                <Image width={12} height={12} src={dayMode} alt='light mode' />
             ) : (
-                <Image width={16} height={16} src={nightMode} alt='dark mode' />
+                <Image width={12} height={12} src={nightMode} alt='dark mode' />
             )}
         </button>
     </div>
