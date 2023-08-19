@@ -20,10 +20,10 @@ function index() {
   ]
   return (
     <>
-      <nav className="relative flex flex-wrap w-full items-center justify-between px-2   bg-transparent border ">
+      <nav className="relative flex flex-wrap w-full items-center justify-between px-2   bg-transparent border-b">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <div className="flex flex-row">
+            <div className="flex flex-row justify-center items-center gap-8">
               <Link
                 className="inline-block ml-6"
                 href="/"
@@ -89,7 +89,7 @@ function index() {
             <ul className="flex flex-col lg:flex-row list-none lg:m-auto ">
               <li className="hover:underline">
                 <Link
-                  className="px-3 py-2 flex items-center text-sm md:text-md leading-snug text-gray-800 hover:opacity-75 dark:text-gray-300"
+                  className="px-3 py-2 flex items-center text-sm md:text-md leading-snug hover:opacity-75"
                   href="/projects"
                   passHref
                 >
@@ -98,7 +98,7 @@ function index() {
               </li>
               <li className="hover:underline">
                 <Link
-                  className="px-3 py-2 flex items-center text-sm md:text-md leading-snug text-gray-200 hover:opacity-75 dark:text-gray-500"
+                  className="px-3 py-2 flex items-center text-sm md:text-md leading-snug hover:opacity-75"
                   href="blog"
                   passHref
                 >
@@ -107,7 +107,7 @@ function index() {
               </li>
               <li className="hover:underline">
                 <Link
-                  className="px-3 py-2 flex items-center text-sm md:text-md  leading-snug text-gray-800 hover:opacity-75 dark:text-gray-500"
+                  className="px-3 py-2 flex items-center text-sm md:text-md  leading-snug hover:opacity-75"
                   href="/contact"
                   passHref
                 >
@@ -121,7 +121,7 @@ function index() {
             </button>
             <div className="flex flex-col md:flex-row">
                 <Link
-                  className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:grayscale dark:text-gray-400"
+                  className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:grayscale"
                   href="https://github.com/abdulahadahmadi"
                   target="_blank"
                   passHref
