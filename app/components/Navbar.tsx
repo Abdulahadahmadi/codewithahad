@@ -7,6 +7,7 @@ import github from '../../public/github.png'
 import Logo from '../../public/logo_transparent.png'
 import { BsYoutube } from 'react-icons/bs'
 import { AiFillGithub } from 'react-icons/ai'
+import DarkModeToggle from "./DarkModeToggle";
 
 function index() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -22,13 +23,18 @@ function index() {
       <nav className="relative flex flex-wrap w-full items-center justify-between px-2   bg-transparent border ">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <Link
-              className="inline-block ml-6"
-              href="/"
-              passHref
-            >
-              <Image className="object-contain  w-20 aspect[3/2] " src={Logo} alt="logo image" />
-            </Link>
+            <div className="flex flex-row">
+              <Link
+                className="inline-block ml-6"
+                href="/"
+                passHref
+              >
+                <Image className="object-contain  w-20 aspect[3/2] " src={Logo} alt="logo image" />
+              </Link>
+
+              <DarkModeToggle />
+
+            </div>
             {/* <li className="mt-3">
                 <label htmlFor="Toggle" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
                   <span className="relative">
@@ -83,7 +89,7 @@ function index() {
             <ul className="flex flex-col lg:flex-row list-none lg:m-auto ">
               <li className="hover:underline">
                 <Link
-                  className="px-3 py-2 flex items-center text-sm md:text-md leading-snug text-gray-800 hover:opacity-75 dark:text-gray-500"
+                  className="px-3 py-2 flex items-center text-sm md:text-md leading-snug text-gray-800 hover:opacity-75 dark:text-gray-300"
                   href="/projects"
                   passHref
                 >
