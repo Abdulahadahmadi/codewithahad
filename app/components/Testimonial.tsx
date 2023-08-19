@@ -19,7 +19,7 @@ const Testimonial = () => {
       </p>
       <div className="flex flex-col md:flex-row justify-center">
         <Link target="_blank" passHref href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/'>
-          <section className="md:max-w-md  bg-white m-4 md:m-10 rounded-xl shadow-xl p-6 md:p-8 hover:bg-cyan-500 hover:text-white hover:decoration-gray-100 hover:cursor-pointer md:rotate-12 mt-6">
+          <section className="md:max-w-md   m-4 md:m-10 rounded-xl shadow-xl p-6 md:p-8 hover:bg-cyan-500 hover:text-white hover:decoration-gray-100 hover:cursor-pointer md:rotate-12 mt-6">
             <p className="text-sm md:text-md ">
               Abdul Ahad Ahmadi is a prestigious member of any team as he always
               dedicates all into work and I really like how he's knows about
@@ -46,7 +46,7 @@ const Testimonial = () => {
         </Link>
 
         <Link target="_blank" passHref href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/'>  
-          <section className="md:max-w-md   bg-white m-4 md:m-10 rounded-xl shadow-xl p-6 md:p-8 hover:bg-cyan-500  hover:text-white hover:decoration-gray-100 hover:cursor-pointer md:rotate-12 ">
+          <section className="md:max-w-md m-4 md:m-10 rounded-xl shadow-xl p-6 md:p-8 hover:bg-cyan-500 hover:text-white hover:decoration-gray-100 hover:cursor-pointer md:rotate-12 ">
             <p className="text-sm md:text-md ">
               Abdul Ahad Ahmadi is a passionate and hardworking programmer with a
               creative mind. Abdul Ahad has helped me on many projects and it was
