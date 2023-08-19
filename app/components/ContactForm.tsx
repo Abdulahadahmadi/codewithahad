@@ -58,7 +58,7 @@ const ContactForm = () => {
         </div>
         <div className="space-y-2">
           <h2 className="text-4xl font-bold  lg:text-5xl">Let's talk!</h2>
-          <div className="dark:text-gray-400">Fill in the form to start a conversation.</div>
+          <div className="">Fill in the form to start a conversation.</div>
         </div>
         <Image width={450} src={doodle} alt="doodle image" className="p-6" />
       </div>
