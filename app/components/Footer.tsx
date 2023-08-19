@@ -40,13 +40,13 @@ const Footer = () => {
                 <a className='font-bold' href='codewithahad01@gmail.com'>codewithahad01@gmail.com</a>
               </div>
               <div className='flex flex-row gap-2 md:gap-4 justify-center items-center'>
-                <Link rel="noopener noreferrer" passHref href="#" title="Email" className="flex items-center justify-center w-10 h-10 rounded-full ring-1 hover:bg-cyan-500 dark:text-gray-900">
+                <Link rel="noopener noreferrer" passHref href="#" title="Email" className="flex items-center justify-center w-10 h-10 rounded-full ring-1 hover:bg-cyan-500">
                   <BsLinkedin />
                 </Link>
-                <Link rel="noopener noreferrer" passHref href="#" title="Twitter" className="flex items-center justify-center w-10 h-10 rounded-full ring-1 hover:bg-cyan-500 dark:text-gray-900">
+                <Link rel="noopener noreferrer" passHref href="#" title="Twitter" className="flex items-center justify-center w-10 h-10 rounded-full ring-1 hover:bg-cyan-500">
                   <BsWhatsapp />
                 </Link>
-                <Link rel="noopener noreferrer" passHref href="#" title="GitHub" className="flex items-center justify-center w-10 h-10 rounded-full ring-1 hover:bg-cyan-500 dark:text-gray-900">
+                <Link rel="noopener noreferrer" passHref href="#" title="GitHub" className="flex items-center justify-center w-10 h-10 rounded-full ring-1 hover:bg-cyan-500">
                   <BsInstagram />
                 </Link>
               </div>
