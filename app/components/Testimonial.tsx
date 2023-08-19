@@ -10,7 +10,7 @@ const Testimonial = () => {
   const [error, setError] = useState(null);
 
   return (
-    <div className="w-full bg-gray-200 py-10">
+    <div className="w-full py-10">
       <h1 className="text-xl md:text-2xl lg:text-4xl text-cyan-500 text-center">
         Testimonial
       </h1>

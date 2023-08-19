@@ -29,7 +29,7 @@ const page = () => {
   ];
 
   return (
-    <div className='w-full bg-gray-200 py-6'>
+    <div className='w-full py-6'>
       <div className='flex flex-row-reverse justify-end items-end gap-2 ring-1 rounded-md px-2 py-1 w-36 md:w-40 hover:cursor-pointer hover:bg-cyan-500 hover:text-white'>
           <Link href='/' passHref className='flex flex-row justify-center items-center gap-1 md:gap-3'>
           <span>back to home</span>
