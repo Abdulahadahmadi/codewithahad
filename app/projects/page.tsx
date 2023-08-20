@@ -37,7 +37,7 @@ const page = () => {
           </Link>
       </div>
       <h1 className='text-xl md:text-2xl lg:text-4xl text-cyan-500 text-center'>Portfolio</h1>
-      <p className='text-2xl md:text-4xl lg:text-6xl text-center font-bold my-8'>Digital Product Showcases</p>
+      <p className='text-2xl md:text-4xl lg:text-6xl text-center font-bold my-8'>Product Showcases</p>
       <section className='flex flex-row justify-center gap-2 md:gap-4'>
         <button className='p-1 md:px-4 md:py-2 hover:text-white hover:bg-cyan-500 ring-1 text-xs md:text-base rounded mx-1'>All</button>
         <button className='p-1 md:px-4 md:py-2 hover:text-white hover:bg-cyan-500 ring-1 text-xs md:text-base rounded mx-1'>Landing Page</button>
