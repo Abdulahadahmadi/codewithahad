@@ -4,7 +4,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import github from '../../public/github.png'
-import Logo from '../../public/logo_transparent.png'
+import Logo1 from '../../public/logo_transparent.png'
+import Logo2 from '../../public/logo.png'
 import { BsYoutube } from 'react-icons/bs'
 import { AiFillGithub } from 'react-icons/ai'
 import DarkModeToggle from "./DarkModeToggle";
@@ -25,11 +26,17 @@ function index() {
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className="flex flex-row justify-center items-center gap-8">
               <Link
-                className="inline-block ml-6"
+                className="inline-block ml-6 dark:text-bg-100"
                 href="/"
                 passHref
               >
-                <Image className="object-contain  w-20 aspect[3/2] " src={Logo} alt="logo image" />
+                {
+                  localStorage.getItem('darkMode') === 'true' ? (
+                    <Image className="object-contain  w-20 aspect[3/2] " src={Logo2} alt="logo image" />
+                  ) : (
+                    <Image className="object-contain  w-20 aspect[3/2] " src={Logo1} alt="logo image" />
+                  )
+                }
               </Link>
 
               <DarkModeToggle />
@@ -116,9 +123,9 @@ function index() {
               </li>
              
             </ul>
-            <button className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-cyan-500 hover:text-white'>
+            <Link href='/contact' className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-cyan-500 hover:text-white'>
               Hire Me!
-            </button>
+            </Link>
             <div className="flex flex-col md:flex-row">
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:grayscale"
