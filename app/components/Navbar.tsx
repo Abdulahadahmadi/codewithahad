@@ -30,13 +30,7 @@ function index() {
                 href="/"
                 passHref
               >
-                {
-                  localStorage.getItem('darkMode') === 'true' ? (
-                    <Image className="object-contain  w-20 aspect[3/2] " src={Logo2} alt="logo image" />
-                  ) : (
-                    <Image className="object-contain  w-20 aspect[3/2] " src={Logo1} alt="logo image" />
-                  )
-                }
+                <Image className="object-contain  w-20 aspect[3/2] " src={Logo1} alt="logo image" />
               </Link>
 
               <DarkModeToggle />
