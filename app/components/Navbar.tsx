@@ -18,7 +18,6 @@ function index() {
     { name: "projects", href: "/projects", current: false },
     { name: "blog", href: "/blog", current: false },
     { name: "Videos", href: "/videos", current: false },
-    { name: "Contact me", href: "/contact", current: false },
   ]
   return (
     <>
@@ -110,19 +109,10 @@ function index() {
               <li className="hover:underline">
                 <Link
                   className="px-3 py-2 flex items-center text-sm md:text-md  leading-snug hover:opacity-75"
-                  href="/videos"
-                  passHref
-                >
-                  <span className="ml-2">{navigation[2].name}</span>
-                </Link>
-              </li>
-              <li className="hover:underline">
-                <Link
-                  className="px-3 py-2 flex items-center text-sm md:text-md  leading-snug hover:opacity-75"
                   href="/contact"
                   passHref
                 >
-                  <span className="ml-2">{navigation[3].name}</span>
+                  <span className="ml-2">{navigation[2].name}</span>
                 </Link>
               </li>
              
