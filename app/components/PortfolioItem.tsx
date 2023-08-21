@@ -12,7 +12,7 @@ const PortfolioItem: React.FC<{ project: Project }> = ({ project }) => {
       <div className="relative">
         <Link href='/projects' passHref>
           <div
-            className="h-80 w-full bg-gray-300 rounded-md overflow-hidden cursor-pointer transition duration-500 hover:opacity-70 bg-no-repeat bg-cover mt-2 md:mt-4"
+            className="h-80 w-full  rounded-md overflow-hidden cursor-pointer transition duration-500 hover:opacity-70 bg-no-repeat shadow-xl bg-cover mt-2 md:mt-4"
             style={{ backgroundImage: `url(${project.image})` }}
           >  
           </div>
