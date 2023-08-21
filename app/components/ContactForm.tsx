@@ -6,11 +6,11 @@ import Image from 'next/image';
 import { BiArrowBack } from 'react-icons/bi';
 import Link from 'next/link';
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
+  interface FormData {
+    name: string;
+    email: string;
+    message: string;
+  }
 
 const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -50,12 +50,6 @@ const ContactForm = () => {
   return (
     <div className="grid max-w-screen-xl gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 my-10">
       <div className="flex flex-col justify-between items-center mt-56 md:mt-0">
-        <div className='flex flex-row-reverse justify-center items-center gap-2 ring-1 rounded-md px-3 py-1 hover:cursor-pointer hover:bg-cyan-500 hover:text-white'>
-          <Link href='/' passHref className='flex flex-row justify-center items-center gap-1 md:gap-3'>
-            <span>back to home</span>
-            <BiArrowBack />
-          </Link>
-        </div>
         <div className="space-y-2">
           <h2 className="text-4xl font-bold  lg:text-5xl">Let's talk!</h2>
           <div className="">Fill in the form to start a conversation.</div>
