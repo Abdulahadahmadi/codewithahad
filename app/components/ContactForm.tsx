@@ -67,7 +67,7 @@ const ContactForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full border rounded-lg p-2"
+            className="w-full border rounded-lg p-2 dark:text-black"
             required
           />
         </div>
@@ -81,7 +81,7 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full border rounded-lg p-2"
+            className="w-full border rounded-lg p-2 dark:text-black"
             required
           />
         </div>
@@ -94,7 +94,7 @@ const ContactForm = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="w-full border rounded-lg p-2"
+            className="w-full border rounded-lg p-2 dark:text-black"
             rows={4}
             required
           />
