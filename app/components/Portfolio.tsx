@@ -15,24 +15,31 @@ const Portfolio: React.FC = () => {
   const projects: Project[] = [
     // ... (your project data)
     {
-      title: 'Project 1',
-      description: 'This is the description for Project 1.',
+      title: 'Jobs.af',
+      description: 'The largest job portal in Afghanistan. technologies: Vue.js, Nuxt.js, TailwindCSS, Node.js and Express.js',
       image: 'https://media.licdn.com/dms/image/C4D22AQFKiDlJUoUT2g/feedshare-shrink_800/0/1674668981057?e=1694649600&v=beta&t=shJFYPBeyyZAEOW_ufwnGx_F2ipIkZeEsBqfBXlprGM',
       link: 'https://jobs.af',
       category: 'Saas Product',
     },
     {
-      title: 'Project 2',
-      description: 'This is the description for Project 2.',
+      title: 'Admin Dashboard',
+      description: 'Technologies: React.js, TailwindCSS, Material UI',
       image: 'https://github.com/Abdulahadahmadi/admin-dashboard/raw/main/public/assets/screenshots/pic-1.png',
-      link: 'https://jobs.af',
+      link: 'https://admin-dashboard-one-roan.vercel.app/',
       category: 'Dashboard',
     },
     {
-      title: 'Project 3',
-      description: 'This is the description for Project 2.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY3Q54FgNW2x2Rp9oY70DjRT6NDlCHomynOt2NyRvpow&s',
-      link: 'https://jobs.af',
+      title: 'Remove Job UI',
+      description: 'Technologies: React.js, TailwindCSS ',
+      image: 'https://raw.githubusercontent.com/Abdulahadahmadi/remote-job-ui/main/src/assets/images/new.png?token=GHSAT0AAAAAACFW2JATKVDVQWVP6VIISBNKZHGEFVA',
+      link: 'https://remote-job-ui.vercel.app/',
+      category: 'Landing Page',
+    },
+    {
+      title: 'Blogr Landing Page',
+      description: 'Technologies: React.js, TailwindCSS',
+      image: 'https://user-images.githubusercontent.com/62951574/262685822-2c71836e-8d07-4690-8446-17322ec88c70.png',
+      link: 'https://blogr-landing-page-sooty-six.vercel.app/',
       category: 'Landing Page',
     },
   ];
@@ -74,6 +81,7 @@ const Portfolio: React.FC = () => {
           Dashboard
         </button>
       </section>
+      {/* ... (rest of your JSX) */}
        {/* Display filtered projects */}
        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
         {filteredProjects.map((project, index) => (
