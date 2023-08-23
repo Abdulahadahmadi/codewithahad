@@ -35,7 +35,7 @@ const PortfolioItem: React.FC<{ project: Project }> = ({ project }) => {
           <div className="text-white text-center">
             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
             <p className="mb-4">{project.description}</p>
-            <Link target='_blank' href={project.link}>
+            <Link target='_blank' href={project.link} className='ring-1 p-2 rounded-full hover:bg-cyan-500 text-sm'>
               View Project
             </Link>
           </div>
