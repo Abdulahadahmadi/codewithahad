@@ -29,17 +29,17 @@ const Page: React.FC = () => {
       category: 'Dashboard',
     },
     {
-      title: 'Blogr Landing Page',
-      description: 'Technologies: React.js, TailwindCSS',
-      image: 'https://user-images.githubusercontent.com/62951574/262685822-2c71836e-8d07-4690-8446-17322ec88c70.png',
-      link: 'https://blogr-landing-page-sooty-six.vercel.app/',
+      title: 'Remove Job UI',
+      description: 'Technologies: React.js, TailwindCSS ',
+      image: 'https://raw.githubusercontent.com/Abdulahadahmadi/remote-job-ui/main/src/assets/images/new.png?token=GHSAT0AAAAAACFW2JATKVDVQWVP6VIISBNKZHGEFVA',
+      link: 'https://remote-job-ui.vercel.app/',
       category: 'Landing Page',
     },
     {
       title: 'Blogr Landing Page',
       description: 'Technologies: React.js, TailwindCSS',
-      image: 'https://raw.githubusercontent.com/Abdulahadahmadi/remote-job-ui/main/src/assets/images/new.png?token=GHSAT0AAAAAACFW2JATKVDVQWVP6VIISBNKZHGEFVA',
-      link: '',
+      image: 'https://user-images.githubusercontent.com/62951574/262685822-2c71836e-8d07-4690-8446-17322ec88c70.png',
+      link: 'https://blogr-landing-page-sooty-six.vercel.app/',
       category: 'Landing Page',
     },
   ];
