@@ -31,7 +31,7 @@ const Portfolio: React.FC = () => {
     {
       title: 'Remove Job UI',
       description: 'Technologies: React.js, TailwindCSS ',
-      image: 'https://raw.githubusercontent.com/Abdulahadahmadi/remote-job-ui/main/src/assets/images/new.png?token=GHSAT0AAAAAACFW2JASZZ67GDSKRJ5HI7Q6ZHHMCAA',
+      image: 'https://github.com/Abdulahadahmadi/codewithahad/blob/main/public/project4.png?raw=true',
       link: 'https://remote-job-ui.vercel.app/',
       category: 'Landing Page',
     },
