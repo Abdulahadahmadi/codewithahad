@@ -53,7 +53,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className='w-full py-6'>
+    <div className='w-full py-6 mx-6'>
       {/* ... (rest of your JSX) */}
       <section className='flex flex-row justify-center gap-2 md:gap-4'>
         <button
