@@ -53,7 +53,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className='w-full py-6 mx-6'>
+    <div className='w-full py-6'>
       {/* ... (rest of your JSX) */}
       <section className='flex flex-row justify-center gap-2 md:gap-4'>
         <button
@@ -83,7 +83,7 @@ const Page: React.FC = () => {
       </section>
       {/* ... (rest of your JSX) */}
        {/* Display filtered projects */}
-       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-6'>
         {filteredProjects.map((project, index) => (
           <PortfolioItem key={index} project={project} />
         ))}

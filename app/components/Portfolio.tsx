@@ -85,7 +85,7 @@ const Portfolio: React.FC = () => {
       </section>
       {/* ... (rest of your JSX) */}
        {/* Display filtered projects */}
-       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-6'>
         {filteredProjects.map((project, index) => (
           <PortfolioItem key={index} project={project} />
         ))}
