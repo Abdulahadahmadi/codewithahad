@@ -54,7 +54,9 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className='w-full py-6'>
-      {/* ... (rest of your JSX) */}
+      <h1 className="text-xl md:text-2xl lg:text-4xl text-cyan-500 text-center mb-8">
+        Projects
+      </h1>
       <section className='flex flex-row justify-center gap-2 md:gap-4'>
         <button
           onClick={() => handleCategoryClick('All')}
