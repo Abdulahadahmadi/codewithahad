@@ -28,7 +28,7 @@ const About = () => {
       </section>
 
 
-      <h1 className='text-cyan-500 text-2xl md:text-5xl font-bold leading-6 my-8'>Sklls</h1>
+      <p className='text-cyan-500 text-2xl md:text-5xl font-bold leading-6 my-8'>Sklls</p>
       <section className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-5'>
         <div title='html' className='skills-cyan'>
           <Image alt='html' width={80} height={80} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
