@@ -17,7 +17,7 @@ const Page: React.FC = () => {
     {
       title: 'Jobs.af',
       description: 'The largest job portal in Afghanistan. technologies: Vue.js, Nuxt.js, TailwindCSS, Node.js and Express.js',
-      image: 'https://media.licdn.com/dms/image/C4D22AQFKiDlJUoUT2g/feedshare-shrink_800/0/1674668981057?e=1694649600&v=beta&t=shJFYPBeyyZAEOW_ufwnGx_F2ipIkZeEsBqfBXlprGM',
+      image: 'https://github.com/Abdulahadahmadi/codewithahad/blob/main/public/jobs.af.jpeg?raw=true',
       link: 'https://jobs.af',
       category: 'Saas Product',
     },
