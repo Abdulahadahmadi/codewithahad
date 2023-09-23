@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import PortfolioItem from '../components/PortfolioItem';
+import GoogleAdSense from '../components/GoogleAdSense';
+import Head from 'next/head';
 
 interface Project {
   title: string;
@@ -54,6 +56,9 @@ const Page: React.FC = () => {
 
   return (
     <div className='w-full py-6'>
+    <Head>
+      <meta name="google-adsense-account" content="ca-pub-8236748191287452" />
+    </Head>
       {/* ... (rest of your JSX) */}
       <section className='flex flex-row justify-center gap-2 md:gap-4'>
         <button
@@ -81,6 +86,8 @@ const Page: React.FC = () => {
           Dashboard
         </button>
       </section>
+
+      <GoogleAdSense />
       {/* ... (rest of your JSX) */}
        {/* Display filtered projects */}
        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-6'>
