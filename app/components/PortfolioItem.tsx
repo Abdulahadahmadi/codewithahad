@@ -33,7 +33,7 @@ const PortfolioItem: React.FC<{ project: Project }> = ({ project }) => {
       {isHovered && (
         <div className="absolute inset-0 mt-4 bg-black bg-opacity-70 flex items-center justify-center rounded-md">
           <div className="text-white text-center">
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+            <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
             <p className="mb-4">{project.description}</p>
             <Link target='_blank' href={project.link} className='ring-1 p-2 rounded-full hover:bg-cyan-500 text-sm'>
               View Project
