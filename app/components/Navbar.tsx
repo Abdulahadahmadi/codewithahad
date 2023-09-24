@@ -10,9 +10,12 @@ import { BsYoutube } from 'react-icons/bs'
 import { AiFillGithub } from 'react-icons/ai'
 import DarkModeToggle from "./DarkModeToggle";
 
-function index() {
+import { User } from "@supabase/supabase-js";
+
+function Navbar() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
   const navigation = [
     { name: "projects", href: "/projects", current: false },
@@ -36,15 +39,6 @@ function index() {
               <DarkModeToggle />
 
             </div>
-            {/* <li className="mt-3">
-                <label htmlFor="Toggle" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
-                  <span className="relative">
-                    <input onClick={handleDarkMode} id="Toggle" type="checkbox" className="hidden peer" />
-                    <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
-                    <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
-                  </span>
-                  </label>
-        sm  </li> */}
             <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border lg:hidden"
                   onClick={() => setNavbarOpen(!navbarOpen)}
@@ -117,8 +111,8 @@ function index() {
               </li>
              
             </ul>
-            <Link href='/contact' className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-cyan-500 hover:text-white'>
-              Hire Me!
+            <Link href='/login' className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-cyan-500 hover:text-white'>
+              {isLogin ? 'Hire me!' : 'Login'}
             </Link>
             <div className="flex flex-col md:flex-row">
                 <Link
@@ -144,4 +138,4 @@ function index() {
     </>
   );
 }
-export default index;
+export default Navbar;
