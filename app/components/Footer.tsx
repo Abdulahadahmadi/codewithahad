@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
           <div className="grid justify-center pt-6 lg:justify-between">
             <div className="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
-              <span>©{new Date().getFullYear()} All rights reserved by Code With Ahad</span>
+              <span>©{new Date().getFullYear()} All rights reserved &copy; by Code With Ahad</span>
             </div>
             <div className="flex flex-col-reverse md:flex-row justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
               <div className='flex justify-center items-center'>
