@@ -1,5 +1,6 @@
 import React from 'react'
 import ContactForm from '../components/ContactForm'
+import Head from 'next/head'
 
 const page: React.FC = () => {
   const style = {
@@ -11,6 +12,9 @@ const page: React.FC = () => {
   }
   return (
     <div className="flex justify-center items-center h-screen">
+      <Head>
+        <title>Contact</title>
+      </Head>
       <ContactForm />
     </div>
   )

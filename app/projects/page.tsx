@@ -57,6 +57,7 @@ const Page: React.FC = () => {
   return (
     <div className='w-full py-6'>
     <Head>
+      <title>Projects</title>
       <meta name="google-adsense-account" content="ca-pub-8236748191287452" />
     </Head>
       {/* ... (rest of your JSX) */}
