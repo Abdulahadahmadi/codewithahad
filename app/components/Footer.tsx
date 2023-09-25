@@ -23,10 +23,13 @@ const Footer = () => {
                   <Link href='/projects'>Projects</Link>
                 </li>
                 <li className='hover:underline'>
-                <Link href='/blog'>Blog</Link>
+                  <Link href='/blog'>Blog</Link>
                 </li>
                 <li className='hover:underline'>
-                <Link href='/contact'>Contact</Link>
+                  <Link href='/contact'>Contact</Link>
+                </li>
+                <li className='hover:underline w-full'>
+                  <Link href='/privacy-policy'>Privacy Policy</Link>
                 </li>
               </ul>
             </div>
