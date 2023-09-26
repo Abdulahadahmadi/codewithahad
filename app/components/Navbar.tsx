@@ -15,7 +15,7 @@ import { User } from "@supabase/supabase-js";
 function Navbar() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
 
   const navigation = [
     { name: "projects", href: "/projects", current: false },
@@ -111,7 +111,7 @@ function Navbar() {
               </li>
              
             </ul>
-            <Link href='/login' className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-cyan-500 hover:text-white'>
+            <Link href='/auth/login' className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-cyan-500 hover:text-white'>
               {isLogin ? 'Hire me!' : 'Login'}
             </Link>
             <div className="flex flex-col md:flex-row">
