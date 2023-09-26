@@ -58,7 +58,6 @@ const Page: React.FC = () => {
     <div className='w-full py-6'>
     <Head>
       <title>Projects</title>
-      <meta name="google-adsense-account" content="ca-pub-8236748191287452" />
     </Head>
       {/* ... (rest of your JSX) */}
       <section className='flex flex-row justify-center gap-2 md:gap-4'>
@@ -87,8 +86,6 @@ const Page: React.FC = () => {
           Dashboard
         </button>
       </section>
-
-      <GoogleAdSense />
       {/* ... (rest of your JSX) */}
        {/* Display filtered projects */}
        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-6'>
