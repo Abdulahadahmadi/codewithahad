@@ -3,11 +3,19 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Testimonial = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    });
+  }, []);
 
   return (
     <div className="w-full py-10">
@@ -18,7 +26,7 @@ const Testimonial = () => {
         What People Say's About Me
       </p>
       <div className="flex flex-col md:flex-row justify-center">
-        <Link target="_blank" passHref href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/'>
+        <Link target="_blank" passHref href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/'  data-aos="zoom-in-up" data-aos-duration="500">
           <section className="md:max-w-md   m-4 md:m-10 rounded-xl shadow-xl p-6 md:p-8 hover:bg-cyan-500 hover:text-white hover:decoration-gray-100 hover:cursor-pointer md:rotate-12 mt-6">
             <p className="text-sm md:text-md ">
               Abdul Ahad Ahmadi is a prestigious member of any team as he always
@@ -45,7 +53,7 @@ const Testimonial = () => {
           </section>
         </Link>
 
-        <Link target="_blank" passHref href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/'>  
+        <Link target="_blank" passHref href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/'  data-aos="zoom-in-up" data-aos-duration="500">  
           <section className="md:max-w-md m-4 md:m-10 rounded-xl shadow-xl p-6 md:p-8 hover:bg-cyan-500 hover:text-white hover:decoration-gray-100 hover:cursor-pointer md:rotate-12 ">
             <p className="text-sm md:text-md ">
               Abdul Ahad Ahmadi is a passionate and hardworking programmer with a
