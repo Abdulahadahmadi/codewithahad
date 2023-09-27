@@ -1,14 +1,26 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import profile from '../../public/profile.png'
 import image from '../../public/intro0.png'
 import { BsLinkedin, BsWhatsapp, BsInstagram, BsCodeSquare } from 'react-icons/bs'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Hero = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500
+    });
+  }, []);
+
+
   return (
-    <div className='flex flex-col-reverse md:flex-row justify-center items-center md:h-screen md:pb-24 mx-5 md:mx-10'>
-      <section className='lg:mr-28'>
+    <div className='flex flex-col-reverse md:flex-row justify-center items-center md:h-screen md:pb-24 mx-5 md:mx-10' >
+      <section className='lg:mr-28' data-aos="fade-right">
           <Image className=' object-center w-full md:w-2/3  object-cover rounded-xl' src={image} alt='Intro Image' />
         <div className='flex flex-row items-center justify-center lg:justify-start'>
           <Link className='text-black bg-gray-300 text-xs md:text-base px-4 md:px-7 py-2 md:py-3 hover:bg-cyan-500 hover:text-white rounded-full' href='/contact' passHref>Contact Me</Link>
@@ -23,7 +35,7 @@ const Hero = () => {
         <span className='flex '><BsCodeSquare className='mt-1' /> &nbsp; UI Design-Software Development-App Development</span>
       </section>
       
-      <section>
+      <section data-aos="fade-left">
         <div className="flex items-center justify-center h-2 w-2 rounded-full bg-orange-500 ">
             <span className="text-white font-bold text-2xl"></span>
         </div>  
