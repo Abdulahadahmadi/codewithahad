@@ -2,13 +2,9 @@ import './globals.scss'
 import Navbar from './components/Navbar'
 import { Inter } from 'next/font/google'
 import Footer from './components/Footer'
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Code With Ahad',
-  description: 'portfolio Platform',
-}
 
 export default function RootLayout({
   children,
