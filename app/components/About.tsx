@@ -1,17 +1,25 @@
-'only client'
+'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import profile from '../../public/avatar.png'
 import mern from '../../public/mern.png';
 import mevn from '../../public/mevn.png';
-import { BsArrowRightCircle } from 'react-icons/bs'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    });
+  }, []);
+
   return (
     <div className='flex flex-col md:flex-row justify-center md:justify-around items-center bg-gradient-to-r from-violet-500 to-fuchsia-500 w-full p-10 '>
-      <section>
+      <section data-aos="fade-left" data-aos-duration="1000">
         <Image src={profile} alt='about' width={550} height={400} className='object-cover object-center grayscale hover:grayscale-0 cursor-pointer' />
       </section>
 
@@ -19,17 +27,17 @@ const About = () => {
       <h1 className='text-cyan-500 text-2xl md:text-5xl font-bold leading-6 my-8'>Tech Stacks</h1>
 
       <section className='flex flex-row gap-4'>
-        <div title='Mern stack' className='skills-black'>
+        <div title='Mern stack' className='skills-black' data-aos="fade-right" data-aos-duration="500">
             <Image alt='mern stack' width={150} height={150} src={mern} />
         </div>
-        <div title='Mevn Stack' className='skills-black'>
+        <div title='Mevn Stack' className='skills-black' data-aos="fade-left" data-aos-duration="500">
             <Image alt='mervn stack' width={150} height={150} src={mevn} />
         </div>
       </section>
 
 
       <p className='text-cyan-500 text-2xl md:text-5xl font-bold leading-6 my-8'>Sklls</p>
-      <section className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-5'>
+      <section className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-5' data-aos="fade-up-left" data-aos-duration="500">
         <div title='html' className='skills-cyan'>
           <Image alt='html' width={80} height={80} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
         </div>
