@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+'use client'
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface Project {
   title: string;
@@ -19,11 +23,20 @@ const PortfolioItem: React.FC<{ project: Project }> = ({ project }) => {
     setIsHovered(false);
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    });
+  }, []);
+
   return (
     <div
       className="relative"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000"
     >
       <div
         className="h-80 w-full rounded-md overflow-hidden cursor-pointer transition hover:bg-opacity-70 duration-500 bg-no-repeat shadow-xl bg-cover mt-2 md:mt-4"
