@@ -5,7 +5,6 @@ import About from './components/About'
 import Testimonial from './components/Testimonial'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
-import Footer from './components/Footer'
 import GoogleAdSense from './components/GoogleAdSense'
 import Head from 'next/head'
 
@@ -21,8 +20,8 @@ export default function Home() {
       {/* write head section for seo of my website */}
 
       <Hero />
-      <Service />
-      <GoogleAdSense />
+      <Service /> 
+      {/* <GoogleAdSense /> */}
       <About />
       <Testimonial />
       <Portfolio />
