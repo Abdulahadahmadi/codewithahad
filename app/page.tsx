@@ -5,6 +5,7 @@ import About from './components/About'
 import Testimonial from './components/Testimonial'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import GoogleAdSense from './components/GoogleAdSense'
 import Head from 'next/head'
 
@@ -26,7 +27,7 @@ export default function Home() {
       <Testimonial />
       <Portfolio />
       <Contact />
-
+      <Footer />
     </div>
   )
 }
