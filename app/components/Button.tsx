@@ -11,7 +11,7 @@ const Button = ({ text }: Props) => {
 
   return (
     <div>
-      <button onClick={addText} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md w-full">
+      <button onClick={addText} className="bg-cyan-500 hover:bg-cyan-700 text-white shadow-lg font-bold py-2 px-4 rounded-md w-full">
         {text}
       </button>
     </div>
