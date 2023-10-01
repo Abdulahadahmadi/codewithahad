@@ -21,18 +21,20 @@ export default function RegistrationForm({ }: Props) {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const signUpUser = async () => {
+    
     // Add your logic to send registration data to the server here
     // You can use the fetch API or a library like Axios
   };
 
   return (
-    <div className="w-full flex flex-wrap justify-center items-center mx-auto bg-gradient-to-r from-violet-500 to-fuchsia-500 p-8 md:p-20">
+    <div className="w-full flex flex-wrap justify-center items-center mx-auto px-8 md:px-20 shadow-lg">
       {/* Register Section */}
-      <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-br">
+      <div className="w-full md:w-1/2 flex flex-col bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-md">
         <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
           <p className="text-center text-3xl">Register</p>
+          <p className="">Create your free account and start to write your first blog!!</p>
           {/* form */}
-          <form className="flex flex-col pt-3 md:pt-8" onSubmit={signUpUser}>
+          <form className="flex flex-col pt-3 md:pt-5" onSubmit={signUpUser}>
             <div className="flex flex-col pt-4">
               <label htmlFor="name" className="text-lg">
                 Name
@@ -102,9 +104,13 @@ export default function RegistrationForm({ }: Props) {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
               />
             </div>
+            <div>
+
+            </div>
             {/* Add similar input fields for email, password, and position */}
-            
-            <Button text='Register' />
+            <div className='my-6'>
+              <Button text='Register' />
+            </div>
           </form>
         </div>
       </div>
