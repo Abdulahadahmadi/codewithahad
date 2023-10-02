@@ -49,8 +49,8 @@ We reserve the right to update this Privacy Policy from time to time. We will po
 If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us at codewithahad01@gmail.com.
     `
   return (
-    <div className="bg-gray-100 p-6">
-      <div className="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+    <div className="p-6">
+      <div className="max-w-3xl mx-auto p-6 rounded-md border border-gray-500">
         <ReactMarkdown>{PrivacyPolicy}</ReactMarkdown>
       </div>
     </div>
