@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* write head section for seo of my website */}
-
+      <Navbar />
       <Hero />
       <Service /> 
       {/* <GoogleAdSense /> */}
