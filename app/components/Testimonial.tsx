@@ -37,7 +37,7 @@ const Testimonial = () => {
             </p>
             <div className="flex flex-row justify-between mt-2">
               <Image
-                src="https://media.licdn.com/dms/image/D4D03AQHJjt2dMbzdYA/profile-displayphoto-shrink_200_200/0/1676427445015?e=1695859200&v=beta&t=-OHzEUNx-8dmdwB5sgHzP0kBeKdF2YqWa0D16gpKPBE"
+                src="https://media.licdn.com/dms/image/D4D03AQHJjt2dMbzdYA/profile-displayphoto-shrink_400_400/0/1676427466178?e=1701907200&v=beta&t=OdK3INKQW6HxZrq-30f98wY6AznbVFpcb9qbbQsi270"
                 alt="profile"
                 width={70}
                 height={70}
@@ -66,7 +66,7 @@ const Testimonial = () => {
             </p>
             <div className="flex flex-row justify-between mt-2">
               <Image
-                src="https://media.licdn.com/dms/image/C5603AQFOa7qV9dMmsg/profile-displayphoto-shrink_200_200/0/1652988970949?e=1695859200&v=beta&t=yPhoVfWZNME_opJtedZy8jOPP4uaOsYxpjjyU3HQq0I"
+                src="https://media.licdn.com/dms/image/C5603AQFOa7qV9dMmsg/profile-displayphoto-shrink_400_400/0/1652988970949?e=1701907200&v=beta&t=PrDKkB9CkaxoXu0k8NAD7Nnv71D7ISVdqkHpzDpQkck"
                 alt="profile"
                 width={70}
                 height={70}
