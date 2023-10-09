@@ -1,18 +1,19 @@
 'use client'
+
+import { ReactNode } from "react"
+
 interface Props { 
-  text: string
+  text?: string
+  icon?: ReactNode
 }
 
-const Button = ({ text }: Props) => {
-  const addText = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    console.log(text)
-  }
+const Button = ({ text, icon }: Props) => {
 
   return (
     <div>
-      <button onClick={addText} className="bg-cyan-500 hover:bg-cyan-700 text-white shadow-lg font-bold py-2 px-4 rounded-md w-full">
+      <button className="bg-cyan-500 hover:bg-cyan-700 text-white shadow-lg font-bold py-2 px-4 rounded-md w-full">
         {text}
+        {icon}
       </button>
     </div>
   )
