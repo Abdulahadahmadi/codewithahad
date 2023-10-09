@@ -23,7 +23,7 @@ export default function SignUpForm({ }: Props) {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [formError, setFormError] = useState('');
 
-  const signUpUser = async (e) => {
+  const signUpUser = async (e: any) => {
     
     // Add logic to send registration data to the server here
     // You can use the fetch API or a library like Axios
