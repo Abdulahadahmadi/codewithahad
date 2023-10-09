@@ -110,10 +110,10 @@ function BlogNavbar() {
               </li>
              
             </ul>
-            <Link href='/auth/signup' className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-cyan-500 hover:text-white'>
+            <Link href='/auth/signup' className='text-sx md:text-sm text-white bg-cyan-500 px-4 py-2 rounded-md hover:bg-cyan-600 hover:text-white'>
               Sign Up
             </Link>
-            <Link href='/auth/login' className='text-md text-black bg-gray-300 px-8 py-2 rounded-full hover:bg-cyan-500 hover:text-white'>
+            <Link href='/auth/login' className='text-sx md:text-sm ring-1 px-4 py-2 rounded-md ml-2 hover:bg-cyan-500 hover:text-white'>
               Login
             </Link>
             <div className="flex flex-col md:flex-row">
