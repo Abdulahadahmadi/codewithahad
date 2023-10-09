@@ -1,8 +1,17 @@
 import React from 'react'
+import SignUpForm from '@/app/components/blog/SignUpForm'
 
 const page = () => {
   return (
-    <div>Sign up</div>
+    <div>
+      <SignUpForm
+        name=""
+        userName=""
+        email=""
+        password=""
+        confirmPassword=""
+      />
+    </div>
   )
 }
 
