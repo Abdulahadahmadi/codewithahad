@@ -15,4 +15,7 @@
   .skills-black {
     @apply bg-white p-3 rounded-xl shadow-xl hover:bg-black cursor-pointer flex justify-center items-center;
   }
+  .navbar-link {
+    @apply px-3 py-2 flex items-center text-sm leading-snug hover:opacity-75;
+  }
 }
