@@ -112,8 +112,8 @@ function Navbar() {
               </li>
              
             </ul>
-            <Link href='/auth/login' className='text-xs md:text-sm text-black bg-gray-300 px-6 py-2 rounded-md hover:bg-cyan-500 hover:text-white'>
-              {isLogin ? 'Hire me!' : 'Login'}
+            <Link href='/contact' className='text-xs md:text-sm ring-1 px-6 py-2 rounded-md hover:bg-cyan-500 hover:text-white'>
+              Hire me!
             </Link>
             <div className="flex flex-col md:flex-row">
                 <Link
