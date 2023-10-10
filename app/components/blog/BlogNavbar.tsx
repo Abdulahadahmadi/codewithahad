@@ -9,6 +9,7 @@ import Logo2 from '../../../public/logo.png'
 import { BsYoutube } from 'react-icons/bs'
 import { AiFillGithub } from 'react-icons/ai'
 import DarkModeToggle from "../DarkModeToggle";
+import { usePathname } from 'next/navigation'
 import { User } from "@supabase/supabase-js";
 
 function BlogNavbar() {
@@ -81,9 +82,9 @@ function BlogNavbar() {
             id="navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:m-auto ">
-              <li className="hover:underline">
+            <li className="hover:underline">
                 <Link
-                  className="px-3 py-2 flex items-center text-sm md:text-md leading-snug hover:opacity-75"
+                  className={`navbar-link ${usePathname() === '/projects' ? 'text-gray-800' : 'text-gray-400'}`}
                   href="/projects"
                   passHref
                 >
@@ -92,7 +93,7 @@ function BlogNavbar() {
               </li>
               <li className="hover:underline">
                 <Link
-                  className="px-3 py-2 flex items-center text-sm md:text-md leading-snug hover:opacity-75"
+                  className={`navbar-link ${usePathname() === '/blog' ? 'text-gray-800' : 'text-gray-400'}`}
                   href="blog"
                   passHref
                 >
@@ -101,7 +102,7 @@ function BlogNavbar() {
               </li>
               <li className="hover:underline">
                 <Link
-                  className="px-3 py-2 flex items-center text-sm md:text-md  leading-snug hover:opacity-75"
+                  className={`navbar-link ${usePathname() === '/videos' ? 'text-gray-800' : 'text-gray-400'}`}
                   href="/videos"
                   passHref
                 >
