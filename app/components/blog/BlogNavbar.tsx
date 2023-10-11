@@ -111,13 +111,13 @@ function BlogNavbar() {
               </li>
              
             </ul>
-            <Link href='/auth/signup' className='text-sx md:text-sm text-white bg-cyan-500 px-4 py-2 rounded-md hover:bg-cyan-600 hover:text-white'>
+            <Link href='/auth/signup' className='text-sx md:text-sm text-white bg-cyan-500 px-4 py-2 rounded-md hover:bg-cyan-600 hover:rounded-full hover:transition-all hover:text-white'>
               Sign Up
             </Link>
-            <Link href='/auth/login' className='text-sx md:text-sm ring-1 px-4 py-2 rounded-md ml-2 hover:bg-cyan-500 hover:text-white'>
+            <Link href='/auth/login' className='text-sx md:text-sm ring-1 px-4 py-2 rounded-md ml-2 hover:bg-cyan-500 hover:rounded-full hover:transition-all hover:text-white'>
               Login
             </Link>
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row"> 
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:grayscale"
                   href="https://github.com/abdulahadahmadi"

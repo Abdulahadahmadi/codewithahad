@@ -112,7 +112,7 @@ function Navbar() {
               </li>
              
             </ul>
-            <Link href='/contact' className='text-xs md:text-sm ring-1 px-6 py-2 rounded-md hover:bg-cyan-500 hover:text-white'>
+            <Link href='/contact' className='text-xs md:text-sm ring-1 px-6 py-2 rounded-md hover:rounded-full hover:transition-all hover:bg-cyan-500 hover:text-white'>
               Hire me!
             </Link>
             <div className="flex flex-col md:flex-row">

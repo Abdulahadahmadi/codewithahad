@@ -23,7 +23,7 @@ const Hero = () => {
       <section className='lg:mr-28' data-aos="fade-right">
           <Image className=' object-center w-full md:w-2/3  object-cover rounded-xl' src={image} alt='Intro Image' />
         <div className='flex flex-row items-center justify-center lg:justify-start'>
-          <Link className='text-xs md:text-base ring-1 px-3 md:px-5 py-1 md:py-2 hover:bg-cyan-500 hover:text-white rounded-md' href='/contact' passHref>Contact Me</Link>
+          <Link className='text-xs md:text-base ring-1 px-3 md:px-5 py-1 md:py-2 hover:bg-cyan-500 hover:rounded-full hover:transition-all hover:text-white rounded-md' href='/contact' passHref>Contact Me</Link>
           <div className='flex m-4 justify-center items-center'>
             <Link className='w-12 h-12 ring-1 rounded-full py-4 pl-4 ml-2 hover:bg-cyan-500 hover:text-white' href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/' target='_blank' passHref>
               <BsLinkedin />
