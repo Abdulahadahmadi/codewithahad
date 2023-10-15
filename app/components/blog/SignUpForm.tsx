@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Button from '../Button';
 import { FcGoogle } from 'react-icons/fc';
 import Bg from '@/public/project4.png'
+import supabase from '@/lib/supabaseClient'
 
 interface Props {
     name: string;
@@ -16,25 +17,49 @@ interface Props {
 
 
 export default function SignUpForm({ }: Props) {
-  const [name, setName] = useState('');
-  const [userName, setUserName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [formData, setFormData] = useState<Props>({
+    name: '',
+    userName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  });
+
   const [formError, setFormError] = useState('');
-
-  const signUpUser = async (e: any) => {
+  
+  
+  const handleChange = async (event: any) => {
+    setFormData((prevFormData: any) => {
+      return {
+        ...prevFormData,
+        [event.target.name]: event.target.value,
+        
+      }
+    })
     
-    // Add logic to send registration data to the server here
-    // You can use the fetch API or a library like Axios
+  };
+  console.log(formData, 'formData');
+  
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-
-    if(!name || !userName || !email || !password || !confirmPassword) {
-      setFormError('Please fill all the fields');
-      return;
+    try {
+      const { data, error } = await supabase.auth.signUp(
+        {
+          email: formData.email,
+          password: formData.password,
+          options: {
+            data: {
+              name: formData.name,
+              userName: formData.userName,
+              confirmPassword: formData.confirmPassword,
+            }
+          }
+        }
+      )
+      alert('Check your email for confirmation!');
+    } catch (error) {
+      alert(error)
     }
-
-
   };
 
   const singUpWithGoogle = (e: any) => {
@@ -44,12 +69,12 @@ export default function SignUpForm({ }: Props) {
   return (
     <div className="flex justify-center items-center py-20 mx-auto px-2 md:px-20">
       {/* Register Section */}
-      <div className="w-full flex flex-row justify-center items-center  rounded-md bg-gray-300">
+      <div className="w-full flex flex-row justify-center items-center  rounded-md">
         <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
           <p className="text-center text-3xl">Register</p>
           <p className="">Create free account and start to write first blog!!</p>
           {/* form */}
-          <form className="flex flex-col pt-3 md:pt-5" onSubmit={signUpUser}>
+          <form className="flex flex-col pt-3 md:pt-5" onSubmit={handleSubmit}>
             <div className="flex flex-col pt-4">
               <label htmlFor="name" className="text-sm">
                 Name
@@ -57,8 +82,9 @@ export default function SignUpForm({ }: Props) {
               <input
                 type="text"
                 id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                name='name'
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="name here"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
               />
@@ -71,8 +97,9 @@ export default function SignUpForm({ }: Props) {
               <input
                 type="text"
                 id="userName"
-                value={userName}
-                onChange={(e) => setUserName(e.target.value)}
+                name='userName'
+                value={formData.userName}
+                onChange={handleChange}
                 placeholder="username here"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
               />
@@ -85,8 +112,9 @@ export default function SignUpForm({ }: Props) {
               <input
                 type="text"
                 id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                name='email'
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="email here"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
               />
@@ -99,8 +127,9 @@ export default function SignUpForm({ }: Props) {
               <input
                 type="password"
                 id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                name='password'
+                value={formData.password}
+                onChange={handleChange}
                 placeholder="password here"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
               />
@@ -113,8 +142,9 @@ export default function SignUpForm({ }: Props) {
               <input
                 type="password"
                 id="confirmPassword"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                name='confirmPassword'
+                value={formData.confirmPassword}
+                onChange={handleChange}
                 placeholder="confirmPassword here"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
               />
