@@ -14,7 +14,7 @@ interface Props {
 }
 
 
-export default function Page({ }: Props) {
+const LoginForm = ({ }: Props) => {
   const [formData, setFormData] = useState<Props>({
     userName: '',
     email: '',
@@ -124,3 +124,5 @@ export default function Page({ }: Props) {
     </div>
   );
 }
+
+export default LoginForm;
