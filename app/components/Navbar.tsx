@@ -85,7 +85,7 @@ function Navbar() {
             <ul className="flex flex-col lg:flex-row list-none lg:m-auto ">
               <li className="hover:underline">
                 <Link
-                  className={`navbar-link ${usePathname() === '/projects' ? 'text-gray-800' : 'text-gray-400'}`}
+                  className={`navbar-link ${usePathname() === '/projects' ? 'text-gray-600' : 'text-gray-400'}`}
                   href="/projects"
                   passHref
                 >
@@ -94,7 +94,7 @@ function Navbar() {
               </li>
               <li className="hover:underline">
                 <Link
-                  className={`navbar-link ${usePathname() === '/blog' ? 'text-gray-800' : 'text-gray-400'}`}
+                  className={`navbar-link ${usePathname() === '/blog' ? 'text-gray-600' : 'text-gray-400'}`}
                   href="blog"
                   passHref
                 >
@@ -103,7 +103,7 @@ function Navbar() {
               </li>
               <li className="hover:underline">
                 <Link
-                  className={`navbar-link ${usePathname() === '/videos' ? 'text-gray-800' : 'text-gray-400'}`}
+                  className={`navbar-link ${usePathname() === '/videos' ? 'text-gray-600' : 'text-gray-400'}`}
                   href="/videos"
                   passHref
                 >
