@@ -6,6 +6,7 @@ import Button from '../Button';
 import { FcGoogle } from 'react-icons/fc';
 import Bg from '@/public/project4.png'
 import supabase from '@/lib/supabaseClient'
+import Link from 'next/link';
 
 interface Props {
     name: string;
@@ -14,7 +15,6 @@ interface Props {
     password: string;
     confirmPassword: string;
 }
-
 
 export default function SignUpForm({ }: Props) {
   const [formData, setFormData] = useState<Props>({
@@ -73,7 +73,7 @@ export default function SignUpForm({ }: Props) {
         <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
           <p className="text-center text-3xl">Register</p>
           <p className="">Create free account and start to write first blog!!</p>
-          {/* form */}
+          {/* form */} 
           <form className="flex flex-col pt-3 md:pt-5" onSubmit={handleSubmit}>
             <div className="flex flex-col pt-4">
               <label htmlFor="name" className="text-sm">
@@ -155,6 +155,7 @@ export default function SignUpForm({ }: Props) {
             {/* Add similar input fields for email, password, and position */}
             <div className='flex flex-col gap-2 my-6'>
               <Button text='Sign up' />
+              <span className='text-xs md:text-sm'>Already have an account? <strong><Link href='/auth/login'>Login</Link></strong></span>
               <button onClick={singUpWithGoogle} className='flex justify-center items-center ring-1 hover:bg-cyan-700 text-white shadow-lg font-bold py-2 px-4 rounded-md w-full'>  
                 <FcGoogle />
               </button>
