@@ -18,9 +18,9 @@ const About = () => {
   }, []);
 
   return (
-    <div className='flex flex-col md:flex-row justify-center md:justify-around items-center bg-gradient-to-r from-violet-500 to-fuchsia-500 p-8 md:p-20'>
+    <div className='flex flex-col md:flex-row justify-center items-center bg-gradient-to-r from-violet-500 to-fuchsia-500 p-8 md:p-20'>
       <section data-aos="fade-left" data-aos-duration="1000">
-        <Image src={profile} alt='about' width={600} height={400} className='object-cover object-center grayscale hover:grayscale-0 cursor-pointer w-auto' />
+        <Image src={profile} alt='about' width={350} height={400} className='object-cover object-center grayscale hover:grayscale-0 cursor-pointer w-auto' />
       </section>
 
       <section className=''>
