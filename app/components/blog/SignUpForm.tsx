@@ -83,6 +83,7 @@ export default function SignUpForm({ }: Props) {
                 type="text"
                 id="name"
                 name='name'
+                required
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="name here"
@@ -98,6 +99,7 @@ export default function SignUpForm({ }: Props) {
                 type="text"
                 id="userName"
                 name='userName'
+                required
                 value={formData.userName}
                 onChange={handleChange}
                 placeholder="username here"
@@ -113,6 +115,7 @@ export default function SignUpForm({ }: Props) {
                 type="text"
                 id="email"
                 name='email'
+                required
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="email here"
@@ -128,6 +131,7 @@ export default function SignUpForm({ }: Props) {
                 type="password"
                 id="password"
                 name='password'
+                required
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="password here"
@@ -143,6 +147,7 @@ export default function SignUpForm({ }: Props) {
                 type="password"
                 id="confirmPassword"
                 name='confirmPassword'
+                required
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder="confirmPassword here"
