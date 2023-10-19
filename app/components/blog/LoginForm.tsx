@@ -6,7 +6,7 @@ import Button from '../../components/Button';
 import { FcGoogle } from 'react-icons/fc';
 import Bg from '@/public/project4.png'
 import supabase from '@/lib/supabaseClient'
-import navigate  from 'next/navigation'
+import { useRouter }  from 'next/navigation'
 import Link from 'next/link';
 
 interface Props {
@@ -23,6 +23,7 @@ const LoginForm = ({ }: Props) => {
     password: '',
   });
 
+  const router = useRouter();
   const [formError, setFormError] = useState('');
   
   
@@ -49,6 +50,10 @@ const LoginForm = ({ }: Props) => {
         email: formData.email,
         password: formData.password,
       })
+      if(error ) throw error
+      if(data) {
+        router.push('/blog')
+      }
     } catch (error) {
       alert(error)
     }
