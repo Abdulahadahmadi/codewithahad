@@ -42,6 +42,10 @@ export default function SignUpForm({ }: Props) {
   
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    if(!formData.email || !formData.password) {
+      alert('Email and password are required');
+      return;
+    }
     try {
       const { data, error } = await supabase.auth.signUp(
         {
