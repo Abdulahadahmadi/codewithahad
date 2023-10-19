@@ -7,6 +7,7 @@ import { FcGoogle } from 'react-icons/fc';
 import Bg from '@/public/project4.png'
 import supabase from '@/lib/supabaseClient'
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface Props {
     name?: string;
@@ -24,6 +25,8 @@ export default function SignUpForm({ }: Props) {
     password: '',
     confirmPassword: '',
   });
+
+  const router = useRouter()
 
   const [formError, setFormError] = useState('');
   
@@ -60,7 +63,10 @@ export default function SignUpForm({ }: Props) {
           }
         }
       )
-      alert('Check your email for confirmation!');
+      if(error ) throw error
+      if(data) {
+        router.push('/blog')
+      }
     } catch (error) {
       alert(error)
     }
