@@ -9,13 +9,13 @@ import supabase from '@/lib/supabaseClient'
 import Link from 'next/link';
 
 interface Props {
-    userName: string;
-    email: string;
-    password: string;
+    userName?: string;
+    email?: string;
+    password?: string;
 }
 
 
-const Page = ({ }: Props) => {
+const Page = ({ userName, email, password }: Props) => {
   const [formData, setFormData] = useState<Props>({
     userName: '',
     email: '',
