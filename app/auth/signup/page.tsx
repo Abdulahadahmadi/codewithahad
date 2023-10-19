@@ -5,11 +5,6 @@ const page = () => {
   return (
     <div>
       <SignUpForm
-        name=""
-        userName=""
-        email=""
-        password=""
-        confirmPassword=""
       />
     </div>
   )

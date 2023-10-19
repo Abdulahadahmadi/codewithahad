@@ -9,11 +9,11 @@ import supabase from '@/lib/supabaseClient'
 import Link from 'next/link';
 
 interface Props {
-    name: string;
-    userName: string;
-    email: string;
-    password: string;
-    confirmPassword: string;
+    name?: string;
+    userName?: string;
+    email?: string;
+    password?: string;
+    confirmPassword?: string;
 }
 
 export default function SignUpForm({ }: Props) {
