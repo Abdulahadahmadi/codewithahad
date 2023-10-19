@@ -6,6 +6,8 @@ import Button from '../../components/Button';
 import { FcGoogle } from 'react-icons/fc';
 import Bg from '@/public/project4.png'
 import supabase from '@/lib/supabaseClient'
+import navigate  from 'next/navigation'
+import Link from 'next/link';
 
 interface Props {
     userName: string;
@@ -77,6 +79,7 @@ const LoginForm = ({ }: Props) => {
                 type="text"
                 id="email"
                 name='email'
+                required
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="email here"
@@ -102,7 +105,8 @@ const LoginForm = ({ }: Props) => {
             </div>
             {/* Add similar input fields for email, password, and position */}
             <div className='flex flex-col gap-2 my-6'>
-              <Button text='Sign up' />
+              <Button text='Login' />
+              <span className='text-xs md:text-sm'>Don't have an account? <strong><Link href='/auth/signup'>Sign up</Link></strong></span>
               <button onClick={singUpWithGoogle} className='flex justify-center items-center ring-1 hover:bg-cyan-700 text-white shadow-lg font-bold py-2 px-4 rounded-md w-full'>  
                 <FcGoogle />
               </button>
