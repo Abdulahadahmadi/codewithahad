@@ -5,9 +5,6 @@ const page = () => {
   return (
     <div>
         <LoginForm
-            userName=''
-            email=''
-            password=''
         />
     </div>
   )

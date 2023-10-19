@@ -10,9 +10,9 @@ import navigate  from 'next/navigation'
 import Link from 'next/link';
 
 interface Props {
-    userName: string;
-    email: string;
-    password: string;
+    userName?: string;
+    email?: string;
+    password?: string;
 }
 
 
@@ -46,7 +46,6 @@ const LoginForm = ({ }: Props) => {
         email: formData.email,
         password: formData.password,
       })
-      alert('Check your email for confirmation!');
     } catch (error) {
       alert(error)
     }
