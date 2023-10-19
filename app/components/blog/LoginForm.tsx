@@ -41,17 +41,11 @@ const LoginForm = ({ }: Props) => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      const { data, error } = await supabase.auth.signUp(
-        {
-          email: formData.email,
-          password: formData.password,
-          options: {
-            data: {
-              userName: formData.userName
-            }
-          }
-        }
-      )
+      
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: formData.email,
+        password: formData.password,
+      })
       alert('Check your email for confirmation!');
     } catch (error) {
       alert(error)
