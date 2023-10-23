@@ -18,4 +18,14 @@
   .navbar-link {
     @apply px-3 py-2 flex items-center text-sm leading-snug hover:opacity-75;
   }
+  .scroll-top {
+    @apply fixed bottom-6 right-8 ring-1 pl-3 w-10 h-10 rounded-full drop-shadow-md hover:bg-cyan-500 hover:text-white text-lg font-bold;
+  }
+}
+
+.visible {
+ display: block;
+}
+.hidden {
+  display: inline;
 }
