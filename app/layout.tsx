@@ -4,6 +4,7 @@ import './globals.scss'
 import Navbar from './components/Navbar'
 import { Inter } from 'next/font/google'
 import { useCurrentRoute } from '@/hooks/useCurrentRoute'
+import ScrollToTopButton from './components/ScrollToTopButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
+        <ScrollToTopButton />
       </body>
     </html>
   )
