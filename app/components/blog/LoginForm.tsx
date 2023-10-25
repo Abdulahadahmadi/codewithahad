@@ -1,10 +1,9 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Button from '../../components/Button';
 import { FcGoogle } from 'react-icons/fc';
-import Bg from '@/public/project4.png'
 import supabase from '@/lib/supabaseClient'
 import { useRouter }  from 'next/navigation'
 import Link from 'next/link';
@@ -20,11 +19,32 @@ const LoginForm = ({ }: Props) => {
   const [formData, setFormData] = useState<Props>({
     userName: '',
     email: '',
-    password: '',
+    password: '', 
   });
+  const [formError, setFormError] = useState<string>('');
+  const [loading, setLoading] = useState(false);
+  const [token, setToken] = useState(false);
+  if (token) {
+    sessionStorage.setItem('token', JSON.stringify(token));
+  }
+
+  useEffect(() => {
+    const storedToken = sessionStorage.getItem('token');
+    if (storedToken) {
+      const data = JSON.parse(storedToken);
+      setToken(data);
+    }
+    if(formError) {
+      const timer = setTimeout(() => {
+          setFormError('')
+        }, 3000);
+        return () => {
+          clearTimeout(timer)
+        }
+    }
+  }, [formError]);
 
   const router = useRouter();
-  const [formError, setFormError] = useState('');
   
   
   const handleChange = async (event: any) => {
@@ -35,7 +55,6 @@ const LoginForm = ({ }: Props) => {
         
       }
     })
-    
   };
   console.log(formData, 'formData');
   
@@ -51,11 +70,12 @@ const LoginForm = ({ }: Props) => {
         password: formData.password,
       })
       if(error ) throw error
+      setToken(!!data);
       if(data) {
         router.push('/blog')
       }
-    } catch (error) {
-      alert(error)
+    } catch (error: any) {
+      setFormError(error.message)
     }
   };
 
@@ -64,7 +84,7 @@ const LoginForm = ({ }: Props) => {
   }
 
   return (
-    <div className="flex justify-center items-center py-20 mx-auto px-2 md:px-20">
+    <div className="flex justify-center items-center py-14 mx-auto px-2 md:px-8 lg:px-20">
       {/* Register Section */}
       <div className="w-full flex flex-row justify-center items-center  rounded-md">
         <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
@@ -84,7 +104,7 @@ const LoginForm = ({ }: Props) => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="email here"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
+                className="text-box"
               />
             </div>
 
@@ -99,7 +119,7 @@ const LoginForm = ({ }: Props) => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="password here"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
+                className="text-box"
               />
             </div>
           <div>
@@ -107,6 +127,7 @@ const LoginForm = ({ }: Props) => {
             {/* Add similar input fields for email, password, and position */}
             <div className='flex flex-col gap-2 my-6'>
               <Button text='Login' />
+              {formError && <p className='text-red-500 text-xs'>{formError}</p>}
               <span className='text-xs md:text-sm'>Don't have an account? <strong><Link href='/auth/signup'>Sign up</Link></strong></span>
               <button onClick={singUpWithGoogle} className='flex justify-center items-center ring-1 hover:bg-cyan-700 text-white shadow-lg font-bold py-2 px-4 rounded-md w-full'>  
                 <FcGoogle />
@@ -114,10 +135,10 @@ const LoginForm = ({ }: Props) => {
             </div>
           </form>
         </div>
-      <div className="w-2/4">
+      <div className="sr-only md:not-sr-only w-2/4">
         <Image
-            className="object-cover w-full h-screen rounded-r-xl hidden md:block"
-            src={Bg}
+            className="object-cover w-full h-screen rounded-r-xl "
+            src='https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D'
             alt="Background"
             width={500}
             height={600}
