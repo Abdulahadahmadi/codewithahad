@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Button from '../Button';
 import { FcGoogle } from 'react-icons/fc';
@@ -25,10 +25,19 @@ export default function SignUpForm({ }: Props) {
     password: '',
     confirmPassword: '',
   });
-
+  const [formError, setFormError] = useState<string>('');
   const router = useRouter()
 
-  const [formError, setFormError] = useState('');
+  useEffect(() => {
+    if(formError) {
+      const timer = setTimeout(() => {
+          setFormError('')
+        }, 3000);
+        return () => {
+          clearTimeout(timer)
+        }
+    }
+  }, [formError])
   
   
   const handleChange = async (event: any) => {
@@ -41,13 +50,12 @@ export default function SignUpForm({ }: Props) {
     })
     
   };
-  console.log(formData, 'formData');
   
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     if(!formData.email || !formData.password) {
       alert('Email and password are required');
-      return;
+      return;   
     }
     try {
       const { data, error } = await supabase.auth.signUp(
@@ -67,8 +75,8 @@ export default function SignUpForm({ }: Props) {
       if(data) {
         router.push('/blog')
       }
-    } catch (error) {
-      alert(error)
+    } catch (error: any) {
+      setFormError(error.message)
     }
   };
 
@@ -77,7 +85,7 @@ export default function SignUpForm({ }: Props) {
   }
 
   return (
-    <div className="flex justify-center items-center py-20 mx-auto px-2 md:px-20">
+    <div className="flex justify-center items-center py-14 mx-auto px-2 md:px-20">
       {/* Register Section */}
       <div className="w-full flex flex-row justify-center items-center  rounded-md">
         <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
@@ -97,7 +105,7 @@ export default function SignUpForm({ }: Props) {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="name here"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
+                className="text-box"
               />
             </div>
             
@@ -113,7 +121,7 @@ export default function SignUpForm({ }: Props) {
                 value={formData.userName}
                 onChange={handleChange}
                 placeholder="username here"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
+                className="text-box"
               />
             </div>
 
@@ -129,7 +137,7 @@ export default function SignUpForm({ }: Props) {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="email here"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
+                className="text-box"
               />
             </div>
 
@@ -145,7 +153,7 @@ export default function SignUpForm({ }: Props) {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="password here"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
+                className="text-box"
               />
             </div>
 
@@ -161,7 +169,7 @@ export default function SignUpForm({ }: Props) {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder="confirmPassword here"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm"
+                className="text-box"
               />
             </div>
             <div>
@@ -170,6 +178,7 @@ export default function SignUpForm({ }: Props) {
             {/* Add similar input fields for email, password, and position */}
             <div className='flex flex-col gap-2 my-6'>
               <Button text='Sign up' />
+              {formError && <p className='text-red-500 text-xs'>{formError}</p>}
               <span className='text-xs md:text-sm'>Already have an account? <strong><Link href='/auth/login'>Login</Link></strong></span>
               <button onClick={singUpWithGoogle} className='flex justify-center items-center ring-1 hover:bg-cyan-700 text-white shadow-lg font-bold py-2 px-4 rounded-md w-full'>  
                 <FcGoogle />
@@ -177,10 +186,10 @@ export default function SignUpForm({ }: Props) {
             </div>
           </form>
         </div>
-      <div className="w-2/4">
+      <div className="sr-only md:not-sr-only w-2/4">
         <Image
-            className="object-cover w-full h-screen rounded-r-xl hidden md:block"
-            src={Bg}
+            className="object-cover w-full h-screen rounded-r-xl"
+            src='https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D'
             alt="Background"
             width={500}
             height={600}
