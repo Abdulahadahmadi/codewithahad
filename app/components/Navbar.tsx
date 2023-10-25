@@ -3,9 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import github from '../../public/github.png'
 import Logo1 from '../../public/logo_transparent.png'
-import Logo2 from '../../public/logo.png'
 import { BsYoutube } from 'react-icons/bs'
 import { AiFillGithub } from 'react-icons/ai'
 import DarkModeToggle from "./DarkModeToggle";
@@ -14,9 +12,7 @@ import { usePathname } from 'next/navigation'
 import { User } from "@supabase/supabase-js";
 
 function Navbar() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
 
   const navigation = [
     { name: "projects", href: "/projects", current: false },
@@ -25,7 +21,7 @@ function Navbar() {
   ]
   return (
     <>
-      <nav className="relative flex flex-wrap w-full items-center justify-between px-2   bg-transparent border-b">
+      <nav className="relative flex flex-wrap w-full items-center justify-between px-2 bg-transparent border-b">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className="flex flex-row justify-center items-center gap-8">
@@ -78,7 +74,7 @@ function Navbar() {
           <div
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? "flex" : " hidden")
+              (navbarOpen ? "flex" : " sr-only")
             }
             id="navbar-danger"
           >

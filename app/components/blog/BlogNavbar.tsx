@@ -10,7 +10,7 @@ import { BsYoutube } from 'react-icons/bs'
 import { AiFillGithub } from 'react-icons/ai'
 import DarkModeToggle from "../DarkModeToggle";
 import { usePathname } from 'next/navigation'
-import { User } from "@supabase/supabase-js";
+import User from "@supabase/supabase-js";
 
 function BlogNavbar() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -77,7 +77,7 @@ function BlogNavbar() {
           <div
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? "flex" : " hidden")
+              (navbarOpen ? "flex" : " sr-only")
             }
             id="navbar-danger"
           >
@@ -111,12 +111,16 @@ function BlogNavbar() {
               </li>
              
             </ul>
-            <Link href='/auth/signup' className='text-sx md:text-sm text-white bg-cyan-500 px-4 py-2 rounded-md hover:bg-cyan-600 hover:rounded-full hover:transition-all hover:text-white'>
-              Sign Up
-            </Link>
-            <Link href='/auth/login' className='text-sx md:text-sm ring-1 px-4 py-2 rounded-md ml-2 hover:bg-cyan-500 hover:rounded-full hover:transition-all hover:text-white'>
-              Login
-            </Link>
+            {!User && 
+                <div className="flex">
+                  <Link href='/auth/signup' className='text-sx md:text-sm text-white bg-cyan-500 px-4 py-2 rounded-md hover:bg-cyan-600 hover:rounded-full hover:transition-all hover:text-white'>
+                    Sign Up
+                  </Link>
+                  <Link href='/auth/login' className='text-sx md:text-sm ring-1 px-4 py-2 rounded-md ml-2 hover:bg-cyan-500 hover:rounded-full hover:transition-all hover:text-white'>
+                    Login
+                  </Link>
+                </div>
+            }
             <div className="flex flex-col md:flex-row"> 
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:grayscale"
