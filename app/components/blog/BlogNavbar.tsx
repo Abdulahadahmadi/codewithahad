@@ -77,7 +77,7 @@ function BlogNavbar() {
           <div
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? "flex" : " sr-only")
+              (navbarOpen ? "flex" : " sr-only md:not-sr-only")
             }
             id="navbar-danger"
           >
