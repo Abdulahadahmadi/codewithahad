@@ -12,7 +12,9 @@ import { usePathname } from 'next/navigation'
 import { User } from "@supabase/supabase-js";
 
 function Navbar() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
 
   const navigation = [
     { name: "projects", href: "/projects", current: false },
@@ -21,7 +23,7 @@ function Navbar() {
   ]
   return (
     <>
-      <nav className="relative flex flex-wrap w-full items-center justify-between px-2 bg-transparent border-b">
+      <nav className="relative flex flex-wrap w-full items-center justify-between px-2   bg-transparent border-b">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className="flex flex-row justify-center items-center gap-8">
@@ -74,7 +76,7 @@ function Navbar() {
           <div
             className={
               "lg:flex flex-grow items-center" +
-              (navbarOpen ? "flex" : " sr-only")
+              (navbarOpen ? "flex" : " sr-only md:not-sr-only")
             }
             id="navbar-danger"
           >
