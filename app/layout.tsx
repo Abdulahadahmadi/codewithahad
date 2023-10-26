@@ -18,7 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <ScrollToTopButton />
+        <div className='sr-only md:not-sr-only'>
+          <ScrollToTopButton />
+        </div>
       </body>
     </html>
   )
