@@ -2,6 +2,8 @@
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+import { edu_tas_beginner } from '../font'
+
 
 export default function RootLayout({
   children,
@@ -10,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={edu_tas_beginner.className}>
         {children}
       </body>
     </html>
