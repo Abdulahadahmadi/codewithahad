@@ -1,13 +1,14 @@
 'use client'
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo1 from '../../public/logo_transparent.png'
+import Logo from '../../public/logo/logo-no-background.png'
 import { BsYoutube } from 'react-icons/bs'
 import { AiFillGithub } from 'react-icons/ai'
 import DarkModeToggle from "./DarkModeToggle";
 import { usePathname } from 'next/navigation'
+import Script from 'next/script'
 
 import { User } from "@supabase/supabase-js";
 
@@ -20,10 +21,9 @@ function Navbar() {
     { name: "projects", href: "/projects", current: false },
     { name: "blog", href: "/blog", current: false },
     { name: "Videos", href: "/videos", current: false },
-  ]
+  ] 
   return (
-    <>
-      <nav className="relative flex flex-wrap w-full items-center justify-between px-2   bg-transparent border-b">
+      <nav className="relative flex flex-wrap w-full items-center justify-between px-2 py-3 bg-transparent shadow-lg border-b">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className="flex flex-row justify-center items-center gap-8">
@@ -32,7 +32,7 @@ function Navbar() {
                 href="/"
                 passHref
               >
-                <Image className="object-contain  w-20 aspect[3/2] " src={Logo1} alt="logo image" />
+                <Image className="object-contain w-20 aspect[3/2]" src={Logo} alt="logo image" />
               </Link>
 
               <DarkModeToggle />
@@ -134,7 +134,6 @@ function Navbar() {
           </div>
         </div>
       </nav>
-    </>
   );
 }
 export default Navbar;
