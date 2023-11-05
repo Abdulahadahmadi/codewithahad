@@ -17,6 +17,8 @@ function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
 
+  const router = usePathname()
+
   const navigation = [
     { name: "projects", href: "/projects", current: false },
     { name: "blog", href: "/blog", current: false },
@@ -81,34 +83,20 @@ function Navbar() {
             id="navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:m-auto ">
-              <li className="hover:underline">
-                <Link
-                  className={`navbar-link ${usePathname() === '/projects' ? 'text-gray-600' : 'text-gray-400'}`}
-                  href="/projects"
-                  passHref
+              {navigation.map((item) => (
+                <li
+                  key={item.name}
+                  className="hover:underline"
                 >
-                  <span className="ml-2">{navigation[0].name}</span>
-                </Link>
-              </li>
-              <li className="hover:underline">
-                <Link
-                  className={`navbar-link ${usePathname() === '/blog' ? 'text-gray-600' : 'text-gray-400'}`}
-                  href="blog"
-                  passHref
-                >
-                  <span className="ml-2">{navigation[1].name}</span>
-                </Link>
-              </li>
-              <li className="hover:underline">
-                <Link
-                  className={`navbar-link ${usePathname() === '/videos' ? 'text-gray-600' : 'text-gray-400'}`}
-                  href="/videos"
-                  passHref
-                >
-                  <span className="ml-2">{navigation[2].name}</span>
-                </Link>
-              </li>
-             
+                  <Link 
+                    className={router === item.href ? 'text-gray-600' : 'text-gray-400'} 
+                    href={item.href} 
+                    passHref
+                  >
+                    <span className="mx-2">{item.name}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
             <Link href='/contact' className='text-xs md:text-sm ring-1 px-6 py-2 rounded-md hover:rounded-full hover:transition-all hover:bg-cyan-500 hover:text-white'>
               Hire me!

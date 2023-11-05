@@ -3,9 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import github from '../../../public/github.png'
-import Logo1 from '../../../public/logo_transparent.png'
-import Logo2 from '../../../public/logo.png'
+import Logo from '../../../public/logo/logo-no-background.png'
 import { BsYoutube } from 'react-icons/bs'
 import { AiFillGithub } from 'react-icons/ai'
 import DarkModeToggle from "../DarkModeToggle";
@@ -17,14 +15,15 @@ function BlogNavbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
 
+  const router = usePathname();
+
   const navigation = [
     { name: "projects", href: "/projects", current: false },
     { name: "blog", href: "/blog", current: false },
     { name: "Videos", href: "/videos", current: false },
   ]
   return (
-    <>
-      <nav className="relative flex flex-wrap w-full items-center justify-between px-2   bg-transparent border-b">
+      <nav className="relative flex flex-wrap w-full items-center justify-between px-2 py-3 bg-transparent shadow-lg border-b">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className="flex flex-row justify-center items-center gap-8">
@@ -33,7 +32,7 @@ function BlogNavbar() {
                 href="/"
                 passHref
               >
-                <Image className="object-contain  w-20 aspect[3/2] " src={Logo1} alt="logo image" />
+                <Image className="object-contain  w-20 aspect[3/2] " src={Logo} alt="logo image" />
               </Link>
 
               <DarkModeToggle />
@@ -82,36 +81,21 @@ function BlogNavbar() {
             id="navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:m-auto ">
-            <li className="hover:underline">
-                <Link
-                  className={`navbar-link ${usePathname() === '/projects' ? 'text-gray-800' : 'text-gray-400'}`}
-                  href="/projects"
-                  passHref
+            {navigation.map((item) => (
+                <li
+                  key={item.name}
+                  className="hover:underline"
                 >
-                  <span className="ml-2">{navigation[0].name}</span>
-                </Link>
-              </li>
-              <li className="hover:underline">
-                <Link
-                  className={`navbar-link ${usePathname() === '/blog' ? 'text-gray-800' : 'text-gray-400'}`}
-                  href="blog"
-                  passHref
-                >
-                  <span className="ml-2">{navigation[1].name}</span>
-                </Link>
-              </li>
-              <li className="hover:underline">
-                <Link
-                  className={`navbar-link ${usePathname() === '/videos' ? 'text-gray-800' : 'text-gray-400'}`}
-                  href="/videos"
-                  passHref
-                >
-                  <span className="ml-2">{navigation[2].name}</span>
-                </Link>
-              </li>
-             
+                  <Link 
+                    className={router === item.href ? 'text-gray-600' : 'text-gray-400'} 
+                    href={item.href} 
+                    passHref
+                  >
+                    <span className="mx-2">{item.name}</span>
+                  </Link>
+                </li>
+              ))} 
             </ul>
-            {!User && 
                 <div className="flex">
                   <Link href='/auth/signup' className='text-sx md:text-sm text-white bg-cyan-500 px-4 py-2 rounded-md hover:bg-cyan-600 hover:rounded-full hover:transition-all hover:text-white'>
                     Sign Up
@@ -120,7 +104,9 @@ function BlogNavbar() {
                     Login
                   </Link>
                 </div>
-            }
+            <section>
+              
+            </section>
             <div className="flex flex-col md:flex-row"> 
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:grayscale"
@@ -142,7 +128,6 @@ function BlogNavbar() {
           </div>
         </div>
       </nav>
-    </>
   );
 }
 export default BlogNavbar;
