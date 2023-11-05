@@ -8,9 +8,6 @@ import { BsYoutube } from 'react-icons/bs'
 import { AiFillGithub } from 'react-icons/ai'
 import DarkModeToggle from "./DarkModeToggle";
 import { usePathname } from 'next/navigation'
-import Script from 'next/script'
-
-import { User } from "@supabase/supabase-js";
 
 function Navbar() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
