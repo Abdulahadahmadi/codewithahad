@@ -11,10 +11,7 @@ const page: React.FC = () => {
     border: '1px solid rgba( 255, 255, 255, 0.18 )'
   }
   return (
-    <div className="flex justify-center items-center h-screen">
-      <Head>
-        <title>Contact</title>
-      </Head>
+    <div>
       <ContactForm />
     </div>
   )
