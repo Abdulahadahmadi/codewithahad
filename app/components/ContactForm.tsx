@@ -1,10 +1,8 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import doodle from '../../public/doodle.svg';
 import Image from 'next/image';
-import { BiArrowBack } from 'react-icons/bi';
-import Link from 'next/link';
 
   interface FormData {
     name: string;
@@ -18,6 +16,7 @@ const ContactForm = () => {
     email: '',
     message: '',
   });
+  const [isClient, setIsClient] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -44,12 +43,11 @@ const ContactForm = () => {
       email: '',
       message: '',
     });
-    // if form is empty then alert the user to fill the form first 
   };
 
   return (
-    <div className="grid max-w-screen-xl gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 my-10">
-      <div className="flex flex-col justify-between items-center mt-56 md:mt-0">
+    <div className="grid max-w-screen-xl gap-8 px-8 md:py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 my-10">
+      <div className="flex flex-col justify-between items-center">
         <div className="space-y-2">
           <h2 className="text-4xl font-bold  lg:text-5xl">Let's talk!</h2>
           <div className="">Fill in the form to start a conversation.</div>
