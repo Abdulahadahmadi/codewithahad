@@ -17,7 +17,7 @@ export default function RootLayout({
   const currentRoute = useCurrentRoute();
   return (
     <html lang="en">
-      <body className={edu_tas_beginner.className}>
+      <body suppressHydrationWarning={true} className={edu_tas_beginner.className}>
         {children}
         <div className='sr-only md:not-sr-only'>
           <ScrollToTopButton />
