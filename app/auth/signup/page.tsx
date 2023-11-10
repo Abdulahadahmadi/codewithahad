@@ -3,7 +3,7 @@ import SignUpForm from '@/app/components/blog/SignUpForm'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sign Up Page'
+  title: 'Sign Up'
 }
 
 const page = () => {
