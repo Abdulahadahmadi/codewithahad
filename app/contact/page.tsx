@@ -1,5 +1,10 @@
 import React from 'react'
 import ContactForm from '../components/ContactForm'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Contact'
+}
 
 const page: React.FC = () => {
   const style = {

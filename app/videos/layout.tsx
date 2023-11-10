@@ -2,10 +2,14 @@
 import { Inter } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { edu_tas_beginner } from '../font'
+import { Metadata } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
-import { edu_tas_beginner } from '../font'
 
+export const metadata: Metadata = {
+  title: 'Videos'
+}
 
 export default function RootLayout({
   children,
