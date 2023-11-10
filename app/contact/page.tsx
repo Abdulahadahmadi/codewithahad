@@ -1,6 +1,5 @@
 import React from 'react'
 import ContactForm from '../components/ContactForm'
-import Head from 'next/head'
 
 const page: React.FC = () => {
   const style = {

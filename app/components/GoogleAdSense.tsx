@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 
 declare global {
   interface Window {
@@ -16,9 +15,6 @@ const GoogleAdSense: React.FC = () => {
 
   return (
     <div className=''>
-      <Head>
-        <meta name="google-adsense-account" content="ca-pub-8236748191287452" />
-      </Head>
       <script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8236748191287452"

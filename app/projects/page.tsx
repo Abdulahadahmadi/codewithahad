@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import PortfolioItem from '../components/PortfolioItem';
 import GoogleAdSense from '../components/GoogleAdSense';
-import Head from 'next/head';
 
 interface Project {
   title: string;
@@ -56,9 +55,6 @@ const Page: React.FC = () => {
 
   return (
     <div className='w-full py-6'>
-    <Head>
-      <title>Projects</title>
-    </Head>
       {/* ... (rest of your JSX) */}
       <section className='flex flex-row justify-center gap-2 md:gap-4'>
         <button
