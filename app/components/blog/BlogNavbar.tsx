@@ -32,7 +32,7 @@ function BlogNavbar() {
                 href="/"
                 passHref
               >
-                <Image className="object-contain  w-20 aspect[3/2] " src={Logo} alt="logo image" />
+                <Image className="object-contain  w-20 aspect[3/2] " src={Logo} alt="code with ahad" />
               </Link>
 
               <DarkModeToggle />
