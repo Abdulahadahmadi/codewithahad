@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import ScrollToTopButton from './components/ScrollToTopButton'
 import { edu_tas_beginner } from './font'
 import { Metadata } from 'next'
+import MouseShadow from './components/MouseShadow'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true} className={edu_tas_beginner.className}>
         {children}
+        <MouseShadow />
         <div className='sr-only md:not-sr-only'>
           <ScrollToTopButton />
         </div>
