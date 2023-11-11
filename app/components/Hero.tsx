@@ -44,7 +44,7 @@ const Hero = () => {
               <BsLinkedin />
             </Link>
             <Link className='w-12 h-12 ring-1 rounded-full py-4 pl-4 ml-2 hover:bg-cyan-500 hover:text-white' href='https://wa.me/35794448287' target='_blank' passHref><BsWhatsapp /></Link>
-            <Link className='w-12 h-12 ring-1 rounded-full py-4 pl-4 ml-2 hover:bg-cyan-500 hover:text-white' href='https://www.instagram.com/ahad_ahmadi_01/' target='_blank' passHref><BsInstagram /></Link>
+            <Link className='w-12 h-12 ring-1 rounded-full py-4 pl-4 ml-2 hover:bg-cyan-500 hover:text-white' href='https://www.instagram.com/ahad_ahmadi01/' target='_blank' passHref><BsInstagram /></Link>
           </div>
         </div>
         <span className='flex '><BsCodeSquare className='mt-1' /> &nbsp; UI Design-Software Development-App Development</span>
