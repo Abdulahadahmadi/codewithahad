@@ -16,7 +16,7 @@ const ContactForm = () => {
     email: '',
     message: '',
   });
-  const [isClient, setIsClient] = useState(false);
+  const [formError, setFormError] = useState('');
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -31,7 +31,7 @@ const ContactForm = () => {
   const sendEmail = () => {
     const { name, email, message } = formData;
     if (name === '' || email === '' || message === '') {
-      alert('Please fill the form first');
+      setFormError('Please fill in all fields');
     }
     else {
       const mailtoLink = `mailto:abdulahad.ahmadi66@gmail.com.com?subject=Contact%20Form%20Submission&body=Name:%20${name}%0D%0AEmail:%20${email}%0D%0AMessage:%20${message}`;
@@ -44,6 +44,17 @@ const ContactForm = () => {
       message: '',
     });
   };
+
+  useEffect(() => {
+    if (formError) {
+      const timer = setTimeout(() => {
+        setFormError('');
+      }, 3000);
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [formError])
 
   return (
     <div className="grid max-w-screen-xl gap-8 px-8 md:py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 my-10">
@@ -97,6 +108,7 @@ const ContactForm = () => {
             required
           />
         </div>
+        {formError && <div className="text-red-500">{formError}</div>}
         <div>
           <button
             type="button"
