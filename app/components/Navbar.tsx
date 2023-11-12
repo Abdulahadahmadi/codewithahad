@@ -12,7 +12,6 @@ import { usePathname } from 'next/navigation'
 function Navbar() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(true);
 
   const router = usePathname()
 
@@ -101,7 +100,7 @@ function Navbar() {
             <div className="flex flex-col md:flex-row">
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:grayscale"
-                  href="https://github.com/abdulahadahmadi"
+                  href="https://github.com/codewithahad01"
                   target="_blank"
                   passHref
                 >

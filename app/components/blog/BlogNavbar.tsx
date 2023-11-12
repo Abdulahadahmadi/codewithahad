@@ -110,7 +110,7 @@ function BlogNavbar() {
             <div className="flex flex-col md:flex-row"> 
                 <Link
                   className="px-3 py-2 flex items-center text-xs md:text-lg  leading-snug text-gray-800 hover:grayscale"
-                  href="https://github.com/abdulahadahmadi"
+                  href="https://github.com/codewithahad01"
                   target="_blank"
                   passHref
                 >
