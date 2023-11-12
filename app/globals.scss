@@ -32,3 +32,24 @@
 .hidden {
   display: inline;
 }
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #06b6d4; /* Set the color of the scrollbar thumb */
+  border-radius: 6px; /* Set the border radius of the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set the color of the scrollbar track */
+}
+
+/* For Firefox */
+/* Note: Firefox supports scrollbar styling using the scrollbar-color property, but it may not support other properties like border-radius */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #808080 #06b6d4; /* Set the color of the scrollbar thumb and track */
+}
