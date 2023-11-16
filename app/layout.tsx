@@ -27,10 +27,10 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true} className={edu_tas_beginner.className}>
         {children}
-        <div className='hidden md:block'>
+        <div className='sr-only md:not-sr-only'>
           <MouseShadow />
         </div>
-        <div className='sr-only md:not-sr-only'>
+        <div className=''>
           <ScrollToTopButton />
         </div>
       </body>
