@@ -82,6 +82,31 @@ const Testimonial = () => {
           </section>
         </Link>
 
+        <Link target="_blank" passHref href='https://www.linkedin.com/in/ahad-ahmadi-1a7295175/'  data-aos="zoom-in-up" data-aos-duration="500">  
+          <section className="md:max-w-md m-4 md:m-10 rounded-xl shadow-xl p-6 md:p-8 hover:bg-cyan-500 hover:text-white hover:decoration-gray-100 hover:cursor-pointer md:rotate-12 ">
+            <p className="text-sm md:text-md ">
+            I had the pleasure of working with Ahad Ahmadi. He is a frontend developer with expert knowledge of React JS and Next JS. He is always eager to learn new technologies and improve his skills. He is also a friendly guy who gets along well with everyone on the team.
+            Ahad is very active and attends/attended several coding competitions. He always takes on new challenges and deliver high-quality results.
+            I highly recommend Ahad for any frontend development role. He is an asset to any organization and a great colleague to work with.
+            </p>
+            <div className="flex flex-row justify-between mt-2">
+              <Image
+                src="https://media.licdn.com/dms/image/D4D03AQHClAkQLKu86g/profile-displayphoto-shrink_400_400/0/1699167147576?e=1705536000&v=beta&t=wRuwypAtLonpTHxIksEu4zKbH53-layX0reH99zb1uM"
+                alt="profile"
+                width={70}
+                height={70}
+                className="object-cover object-center rounded-full mr-6"
+              />
+              <div className="flex flex-col">
+                <span className="text-md md:text-lg font-bold">Shahryar Tayeb</span>
+                <span className="text-xs md:text-md">
+                Full-Stack Software Engineer | JavaScript - Python - PHP - Database Design
+                </span>
+              </div>
+            </div>
+          </section>
+        </Link>
+
       </div>
     </div>
   );
